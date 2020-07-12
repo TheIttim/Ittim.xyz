@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 export default class TycoonMogul extends React.Component {
   render() {
     return (
-      <div className="app">
+      <div>
         <Helmet>
           <title>Ittim | TycoonMogul</title>
           <link rel="canonical" href="https://www.ittim.xyz/#/tm" />

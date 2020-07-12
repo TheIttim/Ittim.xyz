@@ -21,6 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "deploy": "cp build/* /usr/share/nginx/html/ -r",
     "docker:build": "docker build -t puyodead1/ittimwebsite:latest .",
     "docker:pull": "docker pull puyodead1/ittimwebsite:latest",
     "docker:push": "docker push puyodead1/ittimwebsite",
