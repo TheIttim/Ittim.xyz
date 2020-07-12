@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ittimwebsite
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - env:
+          image: puyodead1/ittimwebsite:latest
+          imagePullPolicy: Always
+          name: ittimwebsite
+          ports:
+            - containerPort: 80

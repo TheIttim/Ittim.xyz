@@ -20,7 +20,25 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docker:build": "docker build -t puyodead1/ittimwebsite:latest .",
+    "docker:pull": "docker pull puyodead1/ittimwebsite:latest",
+    "docker:push": "docker push puyodead1/ittimwebsite",
+    "deploy:all": "npm run build:all && npm run docker:build && npm run docker:push && npm run kubernetes:deploy:all",
+    "redeploy:all": "npm run build:all && npm run docker:build && npm run docker:push && npm run kubernetes:patch",
+    "kubernetes:deploy:all": "npm run kubernetes:deploy:namespace && npm run kubernetes:deploy:configmap && npm run kubernetes:deploy:service && npm run kubernetes:deploy:deployment",
+    "kubernetes:deploy:configmap": "kubectl create -f kubernetes/configmap.yaml",
+    "kubernetes:deploy:deployment": "kubectl create -f kubernetes/deployment.yaml",
+    "kubernetes:deploy:namespace": "kubectl create -f kubernetes/namespace.yaml",
+    "kubernetes:deploy:service": "kubectl create -f kubernetes/service.yaml",
+    "kubernetes:apply:all": "npm run kubernetes:apply:namespace && npm run kubernetes:apply:configmap && npm run kubernetes:apply:service && npm run kubernetes:apply:deployment",
+    "kubernetes:apply:configmap": "kubectl apply -f kubernetes/configmap.yaml",
+    "kubernetes:apply:deployment": "kubectl apply -f kubernetes/deployment.yaml",
+    "kubernetes:apply:namespace": "kubectl apply -f kubernetes/namespace.yaml",
+    "kubernetes:apply:service": "kubectl apply -f kubernetes/service.yaml",
+    "kubernetes:update": "npm run build:all && npm run docker:build && npm run kubernetes:apply:deployment && npm run kubernetes:patch",
+    "kubernetes:patch": "kubectl patch statefulset ittimwebsite --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/spec/containers/0/image\", \"value\":\"puyodead1/ittimwebsite\"}]' -n=tycoonmogul",
+    "kubernetes:monitor": "kubectl rollout status statefulsets/ittimwebsite -n=tycoonmogul"
   },
   "eslintConfig": {
     "extends": "react-app"
