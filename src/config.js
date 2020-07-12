@@ -1,3 +1,3 @@
 export default {
-  bot_url: "http://10.32.0.6:3000/api/stats",
+  bot_url: "http://10.96.0.14/api/stats",
 };
