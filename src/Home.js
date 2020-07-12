@@ -8,6 +8,9 @@ export default class Home extends React.Component {
         <Helmet>
           <title>Ittim | Homepage</title>
           <link rel="canonical" href="https://www.ittim.xyz/" />
+          <meta property="og:title" content="Ittim | Homepage" />
+          <meta property="og:url" content="https://ittim.xyz/" />
+          <meta property="og:image" content="https://ittim.xyz/Profile_Picture.png" />
         </Helmet>
         <center>
           <main>

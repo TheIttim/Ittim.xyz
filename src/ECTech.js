@@ -7,7 +7,10 @@ export default class ECTech extends React.Component {
       <div className="app">
         <Helmet>
           <title>Ittim | EC Tech</title>
-          <link rel="canonical" href="https://www.ittim.xyz/ectech" />
+          <link rel="canonical" href="https://www.ittim.xyz/#/ectech" />
+          <meta property="og:title" content="Ittim | EC Tech" />
+          <meta property="og:url" content="https://ittim.xyz/#/ectech" />
+          <meta property="og:image" content="https://ittim.xyz/Profile_Picture.png" />
         </Helmet>
         <center>
           <main>
