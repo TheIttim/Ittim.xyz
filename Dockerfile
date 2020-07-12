@@ -2,7 +2,7 @@ FROM nginx
 EXPOSE 80
 
 RUN rm /etc/nginx/conf.d/default.conf
-COPY default.conf /etc/nginx/conf.d
+COPY data/default.conf /etc/nginx/conf.d
 RUN rm /etc/letsencrypt/ -rf
 RUN mkdir /etc/ssl
 RUN mkdir /etc/ssl/private
