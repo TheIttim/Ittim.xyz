@@ -12,11 +12,9 @@ export default class Status extends React.Component {
   }
 
   async componentDidMount() {
-    await this.formatData()
-    .catch(() => this.resetState());
+    await this.formatData().catch(() => this.resetState());
     TimerMixin.setInterval(async () => {
-      await this.formatData()
-      .catch(() => this.resetState());
+      await this.formatData().catch(() => this.resetState());
     }, 60000);
   }
 
@@ -55,8 +53,8 @@ export default class Status extends React.Component {
         />
       );
 
-      for (var j = 0; j < cluster.shards.length; j++) {
-        const shard = data.shards[j];
+      for (var j = 0; j < 153; j++) {
+        const shard = data.shards[0];
         shardItems.push(
           <ShardItem
             key={shard.id}
@@ -93,67 +91,63 @@ export default class Status extends React.Component {
       );
     else
       return (
-        <div className="content">
-          <div className="section">
-            <div className="container">
-              <div className="columns">
-                <div className="column">
-                  <h3 className="header">Statistics Summary</h3>
-                  <h6 className="subtitle">
-                    Guilds: <span id="guild-data">{this.state.guilds}</span>
-                  </h6>
-                  <h6 className="subtitle">
-                    Total Users:{" "}
-                    <span id="user-data">{this.state.estimatedTotalUsers.toLocaleString()}</span>
-                  </h6>
-
-                  <h6 className="subtitle">
-                    Memory Heap:{" "}
-                    <span id="ram-data">
-                      {(this.state.memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB
-                    </span>
-                  </h6>
-                  <h6 className="subtitle">
-                    Memory RSS:{" "}
-                    <span id="ram-data">
-                      {(this.state.memoryUsage.rss / 1024 / 1024).toFixed(2)} MB
-                    </span>
-                  </h6>
-                  <h6 className="subtitle">
-                    Shards: <span id="shard-data">{this.state.shards.length}</span>
-                  </h6>
-                  <h6 className="subtitle">
-                    Clusters: <span id="cluster-data">{this.state.clusters.length}</span>
-                  </h6>
-                </div>
-              </div>
-              <div className="columns">
-                <div className="column">
-                  <h3 className="header">Shard Status</h3>
-                  <h6 className="subtitle">
-                    <i>This data auto updates</i>
-                  </h6>
-                  <div>
-                    <h6 className="subtitle-key">
-                      Key: <span className="key-item ready">Online</span>,{" "}
-                      <span className="key-item connecting">Connecting</span>,{" "}
-                      <span className="key-item disconnected">Disconnected/Errored</span>
-                    </h6>
-                  </div>
-                  <div className="grid-container">{this.state.shardItems}</div>
-                </div>
-              </div>
-
-              <div className="columns">
-                <div className="column">
-                  <h3 className="header">Cluster Status</h3>
-                  <h6 className="subtitle">
-                    <i>This data auto updates</i>
-                  </h6>
-                  <div className="grid-container">{this.state.clusterItems}</div>
-                </div>
-              </div>
+        <div className="container status-container" style={{ marginTop: "2%" }}>
+          <h6 className="text-center">This data updates automatically every few seconds</h6>
+          <div className="row">
+            <div className="col-12">
+              <h3 className="header">Statistics Summary</h3>
             </div>
+            <div className="col-12">
+              <h6 className="subtitle">
+                Guilds: <span id="guild-data">{this.state.guilds}</span>
+              </h6>
+            </div>
+            <div className="col-12">
+              <h6 className="subtitle">
+                Total Users: {this.state.estimatedTotalUsers.toLocaleString()}
+              </h6>
+            </div>
+
+            <div className="col-12">
+              <h6 className="subtitle">
+                Memory Heap: {(this.state.memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB
+              </h6>
+            </div>
+
+            <div className="col-12">
+              <h6 className="subtitle">
+                Memory RSS: {(this.state.memoryUsage.rss / 1024 / 1024).toFixed(2)} MB
+              </h6>
+            </div>
+
+            <div className="col-12">
+              <h6 className="subtitle">Shards: {this.state.shards.length}</h6>
+            </div>
+
+            <div className="col-12">
+              <h6 className="subtitle">Clusters: {this.state.clusters.length}</h6>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-12">
+              <h3>Shard Status</h3>
+            </div>
+            <div className="col-12">
+              <h6 className="subtitle-key">
+                Key: <span className="key-item ready">Online</span>,{" "}
+                <span className="key-item connecting">Connecting</span>,{" "}
+                <span className="key-item disconnected">Disconnected/Errored</span>
+              </h6>
+            </div>
+            <div className="status-grid">{this.state.shardItems}</div>
+          </div>
+
+          <div className="row">
+            <div className="col-12">
+              <h3>Cluster Status</h3>
+            </div>
+            <div className="status-grid">{this.state.clusterItems}</div>
           </div>
         </div>
       );

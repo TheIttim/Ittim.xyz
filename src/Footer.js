@@ -2,42 +2,51 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="content has-text-centered">
-        <div className="columns">
-          <div className="column is-size-7">
+    <footer className="text-center bg-dark text-white">
+      <div className="container">
+        <div className="row">
+          <div className="col">
             <p>
               Invite{" "}
-              <a href="https://Ittim.xyz/invite.html" target="_blank">
+              <a href="https://Ittim.xyz/invite.html" target="_blank" rel="noopener noreferrer">
                 TycoonMogul
-              </a>{" "}
-              to <i>your</i> Discord server
+              </a>
+              !
             </p>
           </div>
-          <div className="column is-size-7">
+          <div className="col">
             <p>
               Donate via{" "}
-              <a href="https://paypal.me/EthanHagan?locale.x=en_US" target="blank_">
+              <a
+                href="https://paypal.me/EthanHagan?locale.x=en_US"
+                target="blank_"
+                rel="noopener noreferrer"
+              >
                 PayPal
               </a>{" "}
-              or{" "}
+              or become a patron at{" "}
               <a href="https://www.patreon.com/Ittim?fan_landing=true" target="blank_">
                 Patreon
               </a>
             </p>
           </div>
-          <div className="column is-size-7">
+          <div className="col">
             <p>
-              Meet the Team on{" "}
-              <a href="https://discord.gg/Ef2AQns" target="blank_">
+              Meet the team on{" "}
+              <a href="https://discord.gg/Ef2AQns" target="blank_" rel="noopener noreferrer">
                 Discord
               </a>
+              !
             </p>
           </div>
         </div>
-        <span className="is-size-7">
-          <i>Copyright &copy; 2020 Puyodead1 & TycoonMogul</i>
-        </span>
+        <div className="row pb-2">
+          <div className="col">
+            <span className="text-muted">
+              <i>Copyright &copy; 2020 Puyodead1 & Ittim</i>
+            </span>
+          </div>
+        </div>
       </div>
     </footer>
   );

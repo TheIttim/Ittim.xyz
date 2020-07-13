@@ -12,147 +12,190 @@ export default class Home extends React.Component {
           <meta property="og:url" content="https://ittim.xyz/" />
           <meta property="og:image" content="https://ittim.xyz/Profile_Picture.png" />
         </Helmet>
-        <center>
-          <main>
-            <h1 className="title" style={{ marginTop: "2%" }}>
-              The Wonderful World of Ittim's Projects
-            </h1>
-            <p>
-              I made this website to showcase all of the projects I am working on, or have worked
-              on. I found that this would be a lot easier and more effecient than making a different
-              site per project, and would also increase the likelyhood of projects getting seen.
-              Feel free to look around, and if you want to contact me, or follow anything, or maybe
-              even donate, just check the footer at the bottom of each page!
-            </p>
-            <br />
-            <h2 className="subtitle">
-              <b>About Me</b>
-            </h2>
-            <p>
-              My name is Ethan, though I am known on the internet as Ittim. I am a full-time college
-              student at the community college which I also work at part time. My actual title at
-              said college is Prometric Test Center Administrator, which also means that I must
-              answer to not only the college, but also to Prometric, an international company that
-              specializes in secure testing for all kinds of stuff from mechanic certifications to
-              doctor specializations and a whole lot more. I am also a Type 1 Diabetic and have been
-              so since early 2013. I usually spend my free time playing video games, recording more
-              podcast episodes, goofing off on Discord, or just hanging out in the Student Life
-              department at school. With all that out of the way, I have made a table of all the
-              pertinent computer hardware/software I could think of since most of my projects are
-              done using a computer.
-            </p>
-            <br />
-            <h2 className="subtitle">
-              <b>PC Specifications</b>
-            </h2>
-            <table
-              className="table is-bordered is-striped is-narrow is-hoverable"
-              style={{ width: "60%" }}
-              cellPadding="0"
-              cellSpacing="0"
-            >
-              <thead>
-                <tr>
-                  <th>Component</th>
-                  <th>Category</th>
-                  <th>Type</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Operating System</td>
-                  <td>Software</td>
-                  <td>Windows 10 Education</td>
-                </tr>
-                <tr>
-                  <td>Audio Recorder</td>
-                  <td>Software</td>
-                  <td>Audacity</td>
-                </tr>
-                <tr>
-                  <td>Video Editor</td>
-                  <td>Software</td>
-                  <td>Windows Video Editor</td>
-                </tr>
-                <tr>
-                  <td>Primary Monitor</td>
-                  <td>Peripheral</td>
-                  <td>HP 24M</td>
-                </tr>
-                <tr>
-                  <td>Secondary Monitor</td>
-                  <td>Peripheral</td>
-                  <td>HP 24W</td>
-                </tr>
-                <tr>
-                  <td>Webcam</td>
-                  <td>Peripheral</td>
-                  <td>Logitech C615</td>
-                </tr>
-                <tr>
-                  <td>Keyboard</td>
-                  <td>Peripheral</td>
-                  <td>Logitech G513</td>
-                </tr>
-                <tr>
-                  <td>Mouse</td>
-                  <td>Peripheral</td>
-                  <td>Logitech G402</td>
-                </tr>
-                <tr>
-                  <td>Mousepad</td>
-                  <td>Peripheral</td>
-                  <td>Logitech G240</td>
-                </tr>
-                <tr>
-                  <td>Speakers</td>
-                  <td>Peripheral</td>
-                  <td>Logitech Z130</td>
-                </tr>
-                <tr>
-                  <td>Headset</td>
-                  <td>Peripheral</td>
-                  <td>RIG 700 HX Wireless Dolby Atmos Camo</td>
-                </tr>
-                <tr>
-                  <td>Microphone</td>
-                  <td>Peripheral</td>
-                  <td>HyperX QuadCast</td>
-                </tr>
-                <tr>
-                  <td>Case</td>
-                  <td>Hardware</td>
-                  <td>Cooler Master MasterBox Q300L MATx Tower</td>
-                </tr>
-                <tr>
-                  <td>Video Card</td>
-                  <td>Hardware</td>
-                  <td>GeForce GTX 1050 2GB</td>
-                </tr>
-                <tr>
-                  <td>Motherboard</td>
-                  <td>Hardware</td>
-                  <td>GigaByte H110M-S2H</td>
-                </tr>
-                <tr>
-                  <td>Processor</td>
-                  <td>Hardware</td>
-                  <td>Intel Core i7-6700 @ 3.40Ghz</td>
-                </tr>
-                <tr>
-                  <td>RAM</td>
-                  <td>Hardware</td>
-                  <td>HyperX DDR4 2x8GB @ 2400Mhz</td>
-                </tr>
-                <tr>
-                  <td>Power Supply</td>
-                  <td>Hardware</td>
-                  <td>Corsair CX650M</td>
-                </tr>
-              </tbody>
-            </table>
-          </main>
-        </center>
+        <div className="container text-center">
+          <h3 style={{ marginTop: "2%" }}>The Wonderful World of Ittim's Projects</h3>
+          <p>
+            This website is a portfolio of all current and prior projects I have worked on, making
+            my project recognition more elegant.
+          </p>
+          <p>
+            You can contact me at <a href="mailto:theittim@gmail.com">TheIttim@gmail.com</a>, send a
+            donation via{" "}
+            <a href="https://paypal.me/EthanHagan" target="_blank" rel="noopener noreferrer">
+              PayPal
+            </a>
+            , or become a patron at{" "}
+            <a href="https://www.patreon.com/Ittim" target="_blank" rel="noopener noreferrer">
+              Patreon
+            </a>
+            !
+          </p>
+          <br />
+          <h4>
+            <b>About Me</b>
+          </h4>
+          <p>
+            My name is Ethan, also known as Ittim! I am studying Computer Information Systems as
+            part-time employee at my local community college. I'm employed as a Prometric Test
+            Center Administrator. Prometric specializes in secure testing for a broad array of
+            certifications from mechanics to medical. I spend my free time like most college
+            students: playing video games, recording podcast episodes, goofing off with my friends
+            on Discord, or chilling at the Student Life department.
+          </p>
+          <br />
+          <h4>
+            <b>PC Specifications</b>
+          </h4>
+          <table className="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Component</th>
+                <th scope="col">Category</th>
+                <th scope="col">Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="col">Operating System</th>
+                <td>Software</td>
+                <td>
+                  <a
+                    href="https://www.microsoft.com/en-us/education/products/windows"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Windows 10 Education
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">Audio Recorder</th>
+                <td>Software</td>
+                <td>
+                  <a href="https://www.audacityteam.org/" target="_" rel="noopener noreferrer">
+                    Audacity
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">Video Recorder</th>
+                <td>Software</td>
+                <td>
+                  <a href="https://obsproject.com/" target="_" rel="noopener noreferrer">
+                    Open Broadcaster Software (OBS)
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">Video Editor</th>
+                <td>Software</td>
+                <td>
+                  <a
+                    href="https://www.microsoft.com/en-us/windows/photo-movie-editor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Windows Video Editor
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">Primary Monitor</th>
+                <td>Peripheral</td>
+                <td>
+                  <a href="https://amzn.to/3etTrQI" target="_blank" rel="noopener noreferrer">
+                    HP 24M
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">Secondary Monitor</th>
+                <td>Peripheral</td>
+                <td>
+                  <a href="https://amzn.to/2ASYL25" target="_blank" rel="noopener noreferrer">
+                    HP 24W
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">Webcam</th>
+                <td>Peripheral</td>
+                <td>
+                  <a href="https://amzn.to/3gRunEB" target="_blank" rel="noopener noreferrer">
+                    Logitech C615
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">Keyboard</th>
+                <td>Peripheral</td>
+                <td>
+                  <a href="https://amzn.to/2ATalKL" target="_blank" rel="noopener noreferrer">
+                    Logitech G513
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">Mouse</th>
+                <td>Peripheral</td>
+                <td>
+                  <a href="https://amzn.to/2Ctkjmm" target="_blank" rel="noopener noreferrer">
+                    Logitech G402
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">Mousepad</th>
+                <td>Peripheral</td>
+                <td>
+                  <a href="https://amzn.to/3iSNrEm" target="_blank" rel="noopener noreferrer">
+                    Logitech G240
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">Speakers</th>
+                <td>Peripheral</td>
+                <td>
+                  <a href="https://amzn.to/2C6WO2B" target="_blank" rel="noopener noreferrer">
+                    Logitech Z130
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">Headset</th>
+                <td>Peripheral</td>
+                <td>
+                  <a href="https://bit.ly/304sPjL" target="_blank" rel="noopener noreferrer">
+                    RIG 700 HX Wireless Dolby Atmos Camo
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">Microphone</th>
+                <td>Peripheral</td>
+                <td>
+                  <a href="https://amzn.to/302eOmX" target="_blank" rel="noopener noreferrer">
+                    HyperX QuadCast
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">System Build</th>
+                <td>Hardware</td>
+                <td>
+                  <a
+                    href="https://pcpartpicker.com/user/EthanGH/saved/gBhnLk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    PCPartPicker List
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   }

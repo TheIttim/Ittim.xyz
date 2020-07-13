@@ -3,10 +3,16 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import Footer from "./Footer";
 import * as serviceWorker from "./serviceWorker";
+import { ThemeSwitcher } from "@puyodead1/react-bootstrap-theme-switcher";
+// Cosmo for light
+// darkly for dark
+let themes = ["cosmo", "darkly"];
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeSwitcher themePath="/themes" defaultTheme="darkly" storeThemeKey="theme" themes={themes}>
+      <App />
+    </ThemeSwitcher>
   </React.StrictMode>,
   document.getElementById("root")
 );
