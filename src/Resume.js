@@ -7,9 +7,9 @@ export default class Resume extends React.Component {
       <div classNameName="app">
         <Helmet>
           <title>Ittim | Resume</title>
-          <link rel="canonical" href="https://www.ittim.xyz/#/resume" />
+          <link rel="canonical" href="https://www.ittim.xyz/resume" />
           <meta property="og:title" content="Ittim | Resume" />
-          <meta property="og:url" content="https://ittim.xyz/#/" />
+          <meta property="og:url" content="https://ittim.xyz/resume" />
         </Helmet>
 
         <div className="container text-center">

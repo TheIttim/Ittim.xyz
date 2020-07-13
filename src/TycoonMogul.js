@@ -7,9 +7,9 @@ export default class TycoonMogul extends React.Component {
       <div>
         <Helmet>
           <title>Ittim | TycoonMogul</title>
-          <link rel="canonical" href="https://www.ittim.xyz/#/tm" />
+          <link rel="canonical" href="https://www.ittim.xyz/tm" />
           <meta property="og:title" content="Ittim | TycoonMogul" />
-          <meta property="og:url" content="https://ittim.xyz/#/tm" />
+          <meta property="og:url" content="https://ittim.xyz/tm" />
           <meta property="og:image" content="https://ittim.xyz/TM_icon.png" />
         </Helmet>
         <div className="container text-center">

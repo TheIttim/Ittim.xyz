@@ -7,9 +7,9 @@ export default class Home extends React.Component {
       <div className="app">
         <Helmet>
           <title>Ittim | ItCast</title>
-          <link rel="canonical" href="https://www.ittim.xyz/#/itcast" />
+          <link rel="canonical" href="https://www.ittim.xyz/itcast" />
           <meta property="og:title" content="Ittim | ItCast" />
-          <meta property="og:url" content="https://ittim.xyz/#/itcast" />
+          <meta property="og:url" content="https://ittim.xyz/itcast" />
           <meta property="og:image" content="https://ittim.xyz/Profile_Picture.png" />
         </Helmet>
         <div class="container text-center">
