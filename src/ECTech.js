@@ -1,11 +1,11 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import MetaTags from "react-meta-tags";
 
 export default class ECTech extends React.Component {
   render() {
     return (
       <div className="app">
-        <Helmet>
+        <MetaTags>
           <title>Ittim | EC Tech</title>
           <link rel="canonical" href="https://www.ittim.xyz/ectech" />
           <meta property="og:title" content="Ittim | EC Tech" />
@@ -15,7 +15,7 @@ export default class ECTech extends React.Component {
             property="og:description"
             content="Welcome to Ittim.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
           />
-        </Helmet>
+        </MetaTags>
         <div className="container text-center">
           <h1 className="title" style={{ marginTop: "2%" }}>
             EC Tech Solutions LLC

@@ -1,16 +1,20 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import MetaTags from "react-meta-tags";
 
 export default class Resume extends React.Component {
   render() {
     return (
       <div classNameName="app">
-        <Helmet>
+        <MetaTags>
           <title>Ittim | Resume</title>
           <link rel="canonical" href="https://www.ittim.xyz/resume" />
           <meta property="og:title" content="Ittim | Resume" />
           <meta property="og:url" content="https://ittim.xyz/resume" />
-        </Helmet>
+          <meta
+            property="og:description"
+            content="Welcome to Ittim.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
+        </MetaTags>
 
         <div className="container text-center">
           <h3>

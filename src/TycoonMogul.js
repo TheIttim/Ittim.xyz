@@ -1,17 +1,21 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import MetaTags from "react-meta-tags";
 
 export default class TycoonMogul extends React.Component {
   render() {
     return (
       <div>
-        <Helmet>
+        <MetaTags>
           <title>Ittim | TycoonMogul</title>
           <link rel="canonical" href="https://www.ittim.xyz/tm" />
           <meta property="og:title" content="Ittim | TycoonMogul" />
           <meta property="og:url" content="https://ittim.xyz/tm" />
           <meta property="og:image" content="https://ittim.xyz/TM_icon.png" />
-        </Helmet>
+          <meta
+            property="og:description"
+            content="Welcome to Ittim.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
+        </MetaTags>
         <div className="container text-center">
           <h3 className="title" style={{ marginTop: "2%" }}>
             TycoonMogul

@@ -1,11 +1,11 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import MetaTags from "react-meta-tags";
 
 export default class Home extends React.Component {
   render() {
     return (
       <div className="app">
-        <Helmet>
+        <MetaTags>
           <title>Ittim | ItCast</title>
           <link rel="canonical" href="https://www.ittim.xyz/itcast" />
           <meta property="og:title" content="Ittim | ItCast" />
@@ -15,7 +15,7 @@ export default class Home extends React.Component {
             property="og:description"
             content="Welcome to Ittim.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
           />
-        </Helmet>
+        </MetaTags>
         <div class="container text-center">
           <h3 style={{ marginTop: "2%" }}>ItCast</h3>
           <h4>Hosted By: Ittim</h4>
