@@ -1,12 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-export default class ECTech extends React.Component {
+export default class Invite extends React.Component {
   render() {
     return (
       <div className="app">
         <Helmet>
-          <title>Ittim | EC Tech</title>
+          <title>Ittim | Invite</title>
           <link rel="canonical" href="https://www.ittim.xyz/invite" />
           <meta property="og:title" content="Ittim | Invite" />
           <meta property="og:url" content="https://ittim.xyz/invite" />

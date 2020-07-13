@@ -7,6 +7,7 @@ import ProfilePicture from "./pfp.png";
 import Status from "./Status/Status";
 import TycoonMogul from "./TycoonMogul";
 import Resume from "./Resume";
+import Invite from "./Invite";
 import { ThemeChooser } from "@puyodead1/react-bootstrap-theme-switcher/lib/ThemeChooser";
 import "./Styles.css";
 
@@ -95,6 +96,12 @@ export default class App extends React.Component {
           </Route>
           <Route path="/resume">
             <Resume />
+          </Route>
+          <Route path="/status">
+            <Status />
+          </Route>
+          <Route path="/invite">
+            <Invite />
           </Route>
         </Switch>
       </Router>
