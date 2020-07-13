@@ -11,6 +11,10 @@ export default class ECTech extends React.Component {
           <meta property="og:title" content="Ittim | EC Tech" />
           <meta property="og:url" content="https://ittim.xyz/ectech" />
           <meta property="og:image" content="https://ittim.xyz/Profile_Picture.png" />
+          <meta
+            property="og:description"
+            content="Welcome to Ittim.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
         </Helmet>
         <div className="container text-center">
           <h1 className="title" style={{ marginTop: "2%" }}>

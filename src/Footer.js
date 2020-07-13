@@ -8,7 +8,11 @@ export default function Footer() {
           <div className="col">
             <p>
               Invite{" "}
-              <a href="https://Ittim.xyz/invite.html" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://discord.com/oauth2/authorize?client_id=519954424270028811&scope=bot&permissions=380096"
+                target="blank_"
+                rel="noopener noreferrer"
+              >
                 TycoonMogul
               </a>
               !

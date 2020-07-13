@@ -7,9 +7,17 @@ import ProfilePicture from "./pfp.png";
 import Status from "./Status/Status";
 import TycoonMogul from "./TycoonMogul";
 import Resume from "./Resume";
-import Invite from "./Invite";
 import { ThemeChooser } from "@puyodead1/react-bootstrap-theme-switcher/lib/ThemeChooser";
 import "./Styles.css";
+
+const PageNotFound = () => {
+  return (
+    <div className="text-center not-found">
+      <h3>(╯°□°)╯︵ ┻━┻</h3>
+      <h4>We couldn't find that page!</h4>
+    </div>
+  );
+};
 
 export default class App extends React.Component {
   render() {
@@ -68,6 +76,15 @@ export default class App extends React.Component {
                   Discord Server
                 </a>
               </li>
+              <li className="nav-item">
+                <a
+                  href="https://discord.com/oauth2/authorize?client_id=519954424270028811&scope=bot&permissions=380096"
+                  className="nav-link"
+                  target="blank_"
+                >
+                  Invite
+                </a>
+              </li>
             </ul>
 
             <ul className="navbar-nav ml-auto themetoggle">
@@ -82,27 +99,25 @@ export default class App extends React.Component {
           <Route path="/" exact>
             <Home />
           </Route>
-          <Route path="/itcast">
+          <Route path="/itcast" exact>
             <ItCast />
           </Route>
-          <Route path="/tm">
+          <Route path="/tm" exact>
             <TycoonMogul />
           </Route>
-          <Route path="/status">
+          <Route path="/status" exact>
             <Status />
           </Route>
-          <Route path="/ectech">
+          <Route path="/ectech" exact>
             <ECTech />
           </Route>
-          <Route path="/resume">
+          <Route path="/resume" exact>
             <Resume />
           </Route>
-          <Route path="/status">
+          <Route path="/status" exact>
             <Status />
           </Route>
-          <Route path="/invite">
-            <Invite />
-          </Route>
+          <Route component={PageNotFound}></Route>
         </Switch>
       </Router>
     );

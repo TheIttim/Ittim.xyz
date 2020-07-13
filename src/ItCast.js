@@ -10,7 +10,11 @@ export default class Home extends React.Component {
           <link rel="canonical" href="https://www.ittim.xyz/itcast" />
           <meta property="og:title" content="Ittim | ItCast" />
           <meta property="og:url" content="https://ittim.xyz/itcast" />
-          <meta property="og:image" content="https://ittim.xyz/Profile_Picture.png" />
+          <meta property="og:image" content="https://ittim.xyz/Profile_Picture.png" />\
+          <meta
+            property="og:description"
+            content="Welcome to Ittim.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
         </Helmet>
         <div class="container text-center">
           <h3 style={{ marginTop: "2%" }}>ItCast</h3>

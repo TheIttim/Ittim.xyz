@@ -64,7 +64,7 @@ export default class TycoonMogul extends React.Component {
               Discord Verified
             </a>{" "}
             bot, so you can trust it with the minimal amount of data it collects! We are also
-            working on verifying TycoonMogul on Discord Bot Lists as well, which will allow us to
+            working on certifying TycoonMogul on Discord Bot Lists as well, which will allow us to
             support vote rewards! TycoonMogul is on 8 bot lists, 7 websites, 5 certification
             programs, and has completed 1 certification! We are improving and certifying TycoonMogul
             every day!

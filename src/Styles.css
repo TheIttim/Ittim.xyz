@@ -341,3 +341,7 @@ footer p {
 .status-container {
   margin-bottom: 3rem;
 }
+
+.not-found {
+  margin-top: 30vh;
+}

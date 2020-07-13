@@ -11,6 +11,10 @@ export default class Home extends React.Component {
           <meta property="og:title" content="Ittim | Homepage" />
           <meta property="og:url" content="https://ittim.xyz/" />
           <meta property="og:image" content="https://ittim.xyz/Profile_Picture.png" />
+          <meta
+            property="og:description"
+            content="Welcome to Ittim.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
         </Helmet>
         <div className="container text-center">
           <h3 style={{ marginTop: "2%" }}>The Wonderful World of Ittim's Projects</h3>
