@@ -1,6 +1,9 @@
-FROM nginx:stable
-EXPOSE 80 443
+FROM nginx
+EXPOSE 80
 
 RUN rm /etc/nginx/conf.d/*
-COPY nginx/default.conf /etc/nginx/conf.d
+RUN rm /etc/nginx/nginx.conf
+
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+
 COPY build/ /usr/share/nginx/html
