@@ -53,8 +53,8 @@ export default class Status extends React.Component {
         />
       );
 
-      for (var j = 0; j < 153; j++) {
-        const shard = data.shards[0];
+      for (var j = 0; j < data.shards.length; j++) {
+        const shard = data.shards[j];
         shardItems.push(
           <ShardItem
             key={shard.id}
