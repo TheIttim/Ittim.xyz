@@ -26,7 +26,7 @@ export default class Status extends React.Component {
 
   async fetchData() {
     return new Promise(async (resolve, reject) => {
-      return await fetch(config.bot_url)
+      return await fetch(`${config.bot_url}${config.endpoints.stats}`)
         .then((res) => res.json())
         .then((res) => resolve(res))
         .catch((error) => reject(error));

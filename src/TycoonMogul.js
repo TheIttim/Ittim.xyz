@@ -22,7 +22,7 @@ export default class TycoonMogul extends React.Component {
           </h3>
 
           <div className="row">
-            <div className="col">
+            <div className="col-md-6 col-xs-12">
               <a
                 href="https://discord.boats/bot/519954424270028811"
                 target="_blank"
@@ -36,7 +36,7 @@ export default class TycoonMogul extends React.Component {
               </a>
             </div>
 
-            <div className="col">
+            <div className="col-md-6 col-xs-12">
               <a
                 href="https://top.gg/bot/519954424270028811"
                 target="_blank"

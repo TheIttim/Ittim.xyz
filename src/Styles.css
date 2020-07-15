@@ -344,3 +344,64 @@ footer p {
 .not-found {
   margin-top: 30vh;
 }
+
+.zoom {
+  transition: transform 0.2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(
+    1.5
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.leaderboard-nav {
+  background-color: #4a4c52;
+  height: 4rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  border-radius: 1.5rem;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.leaderboard-nav .btn {
+  height: inherit;
+  width: inherit;
+  background-color: #303030;
+}
+
+.leaderboard-nav .btn-first {
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+
+.leaderboard-nav .btn-last {
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+
+.leaderboard-section {
+  height: inherit;
+  border-radius: 1.5rem;
+}
+
+.leaderboard-section:not(:last-child) {
+  margin-right: 0.1rem !important;
+}
+
+.leaderboard-section,
+.col {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.leaderboardnav-active {
+  background-color: #0096d1 !important;
+}
+
+.jumbotron,
+h1,
+.h1 {
+  font-size: 1.4rem;
+}

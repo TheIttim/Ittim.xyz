@@ -9,6 +9,8 @@ import TycoonMogul from "./TycoonMogul";
 import Resume from "./Resume";
 import { ThemeChooser } from "@puyodead1/react-bootstrap-theme-switcher/lib/ThemeChooser";
 import "./Styles.css";
+import Leaderboard from "./Leaderboard";
+import Alliance from "./Alliance";
 
 const PageNotFound = () => {
   return (
@@ -56,10 +58,36 @@ export default class App extends React.Component {
                   ItCast
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink to="/tm" className="nav-link" activeClassName="active">
+              <li className="nav-item dropdown dropdown1">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
                   TycoonMogul
-                </NavLink>
+                </a>
+                <div className="dropdown-menu dropdown-menu1" aria-labelledby="navbarDropdown">
+                  <NavLink to="/tm" className="dropdown-item" activeClassName="active">
+                    Information
+                  </NavLink>
+                  <NavLink to="/status" className="dropdown-item" activeClassName="active">
+                    Status
+                  </NavLink>
+                  <NavLink to="/leaderboards" className="dropdown-item" activeClassName="active">
+                    Leaderboards
+                  </NavLink>
+                  <a
+                    href="https://discord.com/oauth2/authorize?client_id=519954424270028811&scope=bot&permissions=380096"
+                    className="dropdown-item"
+                    target="blank_"
+                  >
+                    Invite
+                  </a>
+                </div>
               </li>
               <li className="nav-item">
                 <NavLink to="/resume" className="nav-link" activeClassName="active">
@@ -67,22 +95,8 @@ export default class App extends React.Component {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/status" className="nav-link" activeClassName="active">
-                  Status
-                </NavLink>
-              </li>
-              <li className="nav-item">
                 <a href="https://discord.gg/Ef2AQns" className="nav-link" target="blank_">
                   Discord Server
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  href="https://discord.com/oauth2/authorize?client_id=519954424270028811&scope=bot&permissions=380096"
-                  className="nav-link"
-                  target="blank_"
-                >
-                  Invite
                 </a>
               </li>
             </ul>
@@ -117,6 +131,10 @@ export default class App extends React.Component {
           <Route path="/status" exact>
             <Status />
           </Route>
+          <Route path="/leaderboards" exact>
+            <Leaderboard />
+          </Route>
+          <Route name="allianceviewer" path="/alliances/*" component={Alliance} />
           <Route component={PageNotFound}></Route>
         </Switch>
       </Router>
