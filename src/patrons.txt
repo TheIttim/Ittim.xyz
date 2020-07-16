@@ -1,0 +1,12 @@
+<h3 style={{ marginTop: "2%" }}>Patrons</h3>
+
+<h4><b>About our Patrons</b><h4>
+<hr>
+List here is all of the amazing people who donate some of their hard earned money each month in order to help sustain our projects for everybody to enjoy! If you know any of these people, or see them in our <a href="https://discord.gg/Ef2AQns" target="blank_">Discord Server</a> please take a moment to say thank you for their continued support. If <i>you</i> would like to help support us in the same manner, feel free to check out our <a href="https://www.patreon.com/Ittim?fan_landing=true" target="blank_">Patreon</a>!
+
+<h4><b>Our Patrons</b></h4>
+<hr>
+PATRON+ 
+PATRON+
+PATRON
+(2 columns of names in abc order, with Patron+'s first, and if possible make names same color as Discord role)
