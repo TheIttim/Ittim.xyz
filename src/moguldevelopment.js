@@ -6,7 +6,7 @@ export default class ECTech extends React.Component {
     return (
       <div className="app">
         <MetaTags>
-          <title>Ittim | EC Tech</title>
+          <title>Ittim | Mogul Development</title>
           <link rel="canonical" href="https://www.ittim.xyz/moguldevelopment" />
           <meta property="og:title" content="Ittim | Mogul Development" />
           <meta property="og:url" content="https://ittim.xyz/moguldevelopment" />
@@ -18,7 +18,7 @@ export default class ECTech extends React.Component {
         </MetaTags>
         <div className="container text-center">
           <h1 className="title" style={{ marginTop: "2%" }}>
-            EC Tech Solutions LLC
+            Mogul Development LLC
           </h1>
           <p>
            MogulDevelopment is the company that owns everything here, I founded it under a different name on November 8, 2019 so I could use it for whatever I needed, now it is the name under which everything TycoonMogul releated is associated. Currently I am the only member of said company, and it has no stable income, but I have plans to change that in the near future, starting with this website!
