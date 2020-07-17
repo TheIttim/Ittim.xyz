@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
-import ECTech from "./ECTech";
+import MogulDevelopment from "./MogulDevelopment";
 import Home from "./Home";
 import ItCast from "./ItCast";
 import ProfilePicture from "./pfp.png";
@@ -122,8 +122,8 @@ export default class App extends React.Component {
           <Route path="/status" exact>
             <Status />
           </Route>
-          <Route path="/ectech" exact>
-            <ECTech />
+          <Route path="/moguldevelopment" exact>
+            <MogulDevelopment />
           </Route>
           <Route path="/resume" exact>
             <Resume />
