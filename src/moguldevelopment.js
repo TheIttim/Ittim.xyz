@@ -8,7 +8,7 @@ export default class ECTech extends React.Component {
         <MetaTags>
           <title>Ittim | EC Tech</title>
           <link rel="canonical" href="https://www.ittim.xyz/moguldevelopment" />
-          <meta property="og:title" content="Ittim | EC Tech" />
+          <meta property="og:title" content="Ittim | Mogul Development" />
           <meta property="og:url" content="https://ittim.xyz/moguldevelopment" />
           <meta property="og:image" content="https://ittim.xyz/Profile_Picture.png" />
           <meta
