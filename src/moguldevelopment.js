@@ -7,9 +7,9 @@ export default class ECTech extends React.Component {
       <div className="app">
         <MetaTags>
           <title>Ittim | EC Tech</title>
-          <link rel="canonical" href="https://www.ittim.xyz/ectech" />
+          <link rel="canonical" href="https://www.ittim.xyz/moguldevelopment" />
           <meta property="og:title" content="Ittim | EC Tech" />
-          <meta property="og:url" content="https://ittim.xyz/ectech" />
+          <meta property="og:url" content="https://ittim.xyz/moguldevelopment" />
           <meta property="og:image" content="https://ittim.xyz/Profile_Picture.png" />
           <meta
             property="og:description"
@@ -21,22 +21,7 @@ export default class ECTech extends React.Component {
             EC Tech Solutions LLC
           </h1>
           <p>
-            Among other projects, I founded a company with a friend, but now it's only me, and well,
-            I am still at a profit of $0. Regardless, this page shall be the go to for anybody
-            wanting the company's services.
-          </p>
-          <br />
-          <h2 className="subtitle">
-            <b>Who We Are:</b>
-          </h2>
-          <p>EC Tech is a small startup company with no current brick & mortar location.</p>
-          <br />
-          <h2 className="subtitle">
-            <b>What We Do:</b>
-          </h2>
-          <p>
-            EC Tech is dedicated to providing websites and other software based products to our
-            clients, as well as maintenance for said products.
+           MogulDevelopment is the company that owns everything here, I founded it under a different name on November 8, 2019 so I could use it for whatever I needed, now it is the name under which everything TycoonMogul releated is associated. Currently I am the only member of said company, and it has no stable income, but I have plans to change that in the near future, starting with this website!
           </p>
         </div>
       </div>
