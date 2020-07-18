@@ -15,7 +15,8 @@ export default function BalanceLB() {
       fetch(url)
         .then(async (res) => {
           if (isMounted) {
-            const data = await res.json();
+            const d = await res.json();
+            const data = d.data;
             const rows = [];
             for (let i = 0; i < data.length; i++) {
               const row = data[i];
