@@ -27,7 +27,7 @@ export default function BalanceLB() {
                         <img
                           className="rounded-circle"
                           alt={`${row.username}'s avatar`}
-                          src={row.avatar}
+                          src={row.avatarURL}
                           width={64}
                           height={64}
                         />
