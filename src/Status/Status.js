@@ -13,9 +13,9 @@ export default class Status extends React.Component {
   }
 
   async componentDidMount() {
-    await this.formatData().catch(() => this.resetState());
+    await this.formatData().catch((error) => this.setState({ error }));
     TimerMixin.setInterval(async () => {
-      await this.formatData().catch(() => this.resetState());
+      await this.formatData().catch((error) => this.setState({ error }));
     }, 60000);
   }
 
@@ -83,10 +83,7 @@ export default class Status extends React.Component {
   render() {
     let content = (
       <div className="no-content">
-        <span>(╯°□°)╯︵ ┻━┻</span>
-        <br />
-        Oops, it seems the bot may be offline or rebooting! <br /> This page will update when data
-        becomes available.
+        <h3>Loading Status...</h3>
       </div>
     );
     if (this.state && this.state.clusters) {
@@ -149,6 +146,15 @@ export default class Status extends React.Component {
             </div>
             <div className="status-grid">{this.state.clusterItems}</div>
           </div>
+        </div>
+      );
+    } else if (this.state && this.state.error) {
+      content = (
+        <div className="no-content">
+          <span>(╯°□°)╯︵ ┻━┻</span>
+          <br />
+          Oops, it seems the bot may be offline or rebooting! <br /> This page will update when data
+          becomes available.
         </div>
       );
     }

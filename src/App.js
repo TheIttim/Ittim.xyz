@@ -11,6 +11,8 @@ import { ThemeChooser } from "@puyodead1/react-bootstrap-theme-switcher/lib/Them
 import "./Styles.css";
 import Leaderboard from "./Leaderboard";
 import Alliance from "./Alliance";
+import Patrons from "./Patrons";
+import MrMogul from "./MrMogul";
 
 const PageNotFound = () => {
   return (
@@ -58,6 +60,11 @@ export default class App extends React.Component {
                   ItCast
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink to="/moguldevelopment" className="nav-link" activeClassName="active">
+                  Mogul Development
+                </NavLink>
+              </li>
               <li className="nav-item dropdown dropdown1">
                 <a
                   className="nav-link dropdown-toggle"
@@ -71,7 +78,7 @@ export default class App extends React.Component {
                   TycoonMogul
                 </a>
                 <div className="dropdown-menu dropdown-menu1" aria-labelledby="navbarDropdown">
-                  <NavLink to="/tm" className="dropdown-item" activeClassName="active">
+                  <NavLink to="/tycoonmogul" className="dropdown-item" activeClassName="active">
                     Information
                   </NavLink>
                   <NavLink to="/status" className="dropdown-item" activeClassName="active">
@@ -90,8 +97,18 @@ export default class App extends React.Component {
                 </div>
               </li>
               <li className="nav-item">
+                <NavLink to="/mrmogul" className="nav-link" activeClassName="active">
+                  Mr. Mogul
+                </NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink to="/resume" className="nav-link" activeClassName="active">
                   Resume
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/patrons" className="nav-link" activeClassName="active">
+                  Patrons
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -116,7 +133,7 @@ export default class App extends React.Component {
           <Route path="/itcast" exact>
             <ItCast />
           </Route>
-          <Route path="/tm" exact>
+          <Route path="/tycoonmogul" exact>
             <TycoonMogul />
           </Route>
           <Route path="/status" exact>
@@ -133,6 +150,12 @@ export default class App extends React.Component {
           </Route>
           <Route path="/leaderboards" exact>
             <Leaderboard />
+          </Route>
+          <Route path="/patrons" exact>
+            <Patrons />
+          </Route>
+          <Route path="/mrmogul" exact>
+            <MrMogul />
           </Route>
           <Route name="allianceviewer" path="/alliances/*" component={Alliance} />
           <Route component={PageNotFound}></Route>

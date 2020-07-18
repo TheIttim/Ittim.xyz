@@ -23,7 +23,7 @@ export default class Resume extends React.Component {
           <p>
             <b>BPCC Prometric Testing Center Administrator 2020 - Present</b>
           </p>
-          <ul>
+          <ul className="nostyle">
             <li>Greet Examinees and verify identification</li>
             <li>Maintain confidentiality for clients</li>
             <li>Protect security of all software and testing environment</li>

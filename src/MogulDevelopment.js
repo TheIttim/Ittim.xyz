@@ -17,11 +17,12 @@ export default class MogulDevelopment extends React.Component {
           />
         </MetaTags>
         <div className="container text-center">
-          <h1 className="title" style={{ marginTop: "2%" }}>
+          <h3 className="title" style={{ marginTop: "2%" }}>
             Mogul Development LLC
-          </h1>
+          </h3>
           <p>
-           MogulDevelopment is the company that owns everything here, I founded it under a different name on November 8, 2019 so I could use it for whatever I needed, now it is the name under which everything TycoonMogul releated is associated. Currently I am the only member of said company, and it has no stable income, but I have plans to change that in the near future, starting with this website!
+            Mogul Development, founded November 8, 2019, is the development team responsible for the
+            TycoonMogul family of applications.
           </p>
         </div>
       </div>

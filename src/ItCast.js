@@ -1,7 +1,7 @@
 import React from "react";
 import MetaTags from "react-meta-tags";
 
-export default class Home extends React.Component {
+export default class ItCast extends React.Component {
   render() {
     return (
       <div className="app">

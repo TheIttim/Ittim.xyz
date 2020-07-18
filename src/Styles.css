@@ -204,6 +204,10 @@ footer p {
   margin-top: 1rem;
 }
 
+footer {
+  margin-top: 3rem;
+}
+
 .custom-control-input:checked ~ .custom-control-label::before {
   background-color: #27afe3 !important;
 }
@@ -404,4 +408,24 @@ footer p {
 h1,
 .h1 {
   font-size: 1.4rem;
+}
+
+.patron-plus {
+  color: #ad1457;
+}
+
+.patron {
+  color: #e91e63;
+}
+
+ul {
+  list-style-type: none;
+}
+
+footer .text {
+  font-size: 12px;
+}
+
+footer .copy {
+  font-size: 14px;
 }

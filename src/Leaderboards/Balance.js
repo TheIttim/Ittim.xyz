@@ -55,18 +55,22 @@ export default function BalanceLB() {
 
   let content = <h3>Loading Leaderboard Information....</h3>;
   if (data && !data.error) {
-    content = (
-      <table class="table table-striped table-hover">
-        <thead>
-          <tr>
-            <th scope="col">Position</th>
-            <th scope="col">Username</th>
-            <th scope="col">Balance</th>
-          </tr>
-        </thead>
-        <tbody>{data}</tbody>
-      </table>
-    );
+    if (data.length === 0) {
+      content = <h3>Oops, there doesn't seem to be any data yet!</h3>;
+    } else {
+      content = (
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Position</th>
+              <th scope="col">Username</th>
+              <th scope="col">Balance</th>
+            </tr>
+          </thead>
+          <tbody>{data}</tbody>
+        </table>
+      );
+    }
   } else if (data && data.error) {
     content = (
       <div style={{ marginTop: "20vh" }}>
