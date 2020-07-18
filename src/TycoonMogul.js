@@ -100,7 +100,7 @@ export default class TycoonMogul extends React.Component {
                 <td>General</td>
                 <td>Lists Achievements by category</td>
               </tr>
-              <tr>
+              {/* <tr>
                 <th scope="col">AdminPay</th>
                 <td>APay</td>
                 <td>Developers</td>
@@ -111,7 +111,7 @@ export default class TycoonMogul extends React.Component {
                 <td>AXP</td>
                 <td>Developers</td>
                 <td>Allows developers to add or subtract xp from a user.</td>
-              </tr>
+              </tr> */}
               <tr>
                 <th scope="col">Alliance</th>
                 <td>None</td>
@@ -226,7 +226,7 @@ export default class TycoonMogul extends React.Component {
                 <td>Economy</td>
                 <td>Lets user collect their daily reward base on Tycoon Level</td>
               </tr>
-              <tr>
+              {/* <tr>
                 <th scope="col">Delete</th>
                 <td>None</td>
                 <td>Developer</td>
@@ -234,7 +234,7 @@ export default class TycoonMogul extends React.Component {
                   Allows the developers to delete all user data for a specific user incase of bugs
                   or exploits
                 </td>
-              </tr>
+              </tr> */}
               <tr>
                 <th scope="col">Disable</th>
                 <td>None</td>
@@ -250,12 +250,12 @@ export default class TycoonMogul extends React.Component {
                 <td>General</td>
                 <td>Allows users to re-enable data collection/generation by TycoonMogul</td>
               </tr>
-              <tr>
+              {/* <tr>
                 <th scope="col">Eval</th>
                 <td>None</td>
                 <td>Developer</td>
                 <td>Allows Developers to evaluate code before adding it to the bot</td>
-              </tr>
+              </tr> */}
               <tr>
                 <th scope="col">Flip</th>
                 <td>None</td>
@@ -298,12 +298,12 @@ export default class TycoonMogul extends React.Component {
                 <td>General</td>
                 <td>Displays users TM profile</td>
               </tr>
-              <tr>
+              {/* <tr>
                 <th scope="col">Reboot</th>
                 <td>Restart</td>
                 <td>None</td>
                 <td>Allows the developers to restart TycoonMogul safely</td>
-              </tr>
+              </tr> */}
               <tr>
                 <th scope="col">SetPrefix</th>
                 <td>None</td>

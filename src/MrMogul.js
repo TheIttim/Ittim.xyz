@@ -27,6 +27,60 @@ export default class MrMogul extends React.Component {
             them to stay active in our community! <br />
             <i>Side Note: It also allows us to punish the bad apples.</i>
           </p>
+          <table className="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Command</th>
+                <th scope="col">Alias(es)</th>
+                <th scope="col">Category</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="col">Help</th>
+                <td>None</td>
+                <td>General</td>
+                <td>Shows help for commands or categories</td>
+              </tr>
+              <tr>
+                <th scope="col">info</th>
+                <td>None</td>
+                <td>General</td>
+                <td>Information about the server</td>
+              </tr>
+              <tr>
+                <th scope="col">itcast</th>
+                <td>None</td>
+                <td>General</td>
+                <td>Information about ItCast</td>
+              </tr>
+              <tr>
+                <th scope="col">mrmogul</th>
+                <td>None</td>
+                <td>General</td>
+                <td>Information about Mr. Mogul</td>
+              </tr>
+              <tr>
+                <th scope="col">ping</th>
+                <td>None</td>
+                <td>General</td>
+                <td>Gets the bots ping</td>
+              </tr>
+              <tr>
+                <th scope="col">support</th>
+                <td>None</td>
+                <td>General</td>
+                <td>Information on getting support</td>
+              </tr>
+              <tr>
+                <th scope="col">tycoonmogul</th>
+                <td>None</td>
+                <td>General</td>
+                <td>Information about TycoonMogul</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     );
