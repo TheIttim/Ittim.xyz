@@ -51,7 +51,7 @@ export default function BalanceLB() {
     return value;
   }
 
-  const data = usePromise(`${config.bot_url}${config.endpoints.leaderboards}/userlevel`);
+  const data = usePromise(`${config.apiURL}${config.endpoints.leaderboards}/userlevel`);
 
   let content = <h3>Loading Leaderboard Information....</h3>;
   if (data && !data.error) {

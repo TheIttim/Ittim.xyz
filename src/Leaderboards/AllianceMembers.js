@@ -44,7 +44,7 @@ export default function BalanceLB() {
     return value;
   }
 
-  const data = usePromise(`${config.bot_url}${config.endpoints.leaderboards}/alliancemembers`);
+  const data = usePromise(`${config.apiURL}${config.endpoints.leaderboards}/alliancemembers`);
   console.log(data);
 
   let content = <h3>Loading Leaderboard Information....</h3>;

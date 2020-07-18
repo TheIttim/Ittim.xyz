@@ -52,7 +52,7 @@ export default function BalanceLB() {
     return value;
   }
 
-  const data = usePromise(`${config.bot_url}${config.endpoints.leaderboards}/tycoonlevel`);
+  const data = usePromise(`${config.apiURL}${config.endpoints.leaderboards}/tycoonlevel`);
 
   let content = <h3>Loading Leaderboard Information....</h3>;
   if (data && !data.error) {
