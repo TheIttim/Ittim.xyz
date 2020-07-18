@@ -61,7 +61,7 @@ const Alliance = (props) => {
                   <img
                     className="rounded-circle zoom"
                     alt={`${obj.username}'s avatar`}
-                    src={obj.avatar}
+                    src={obj.avatarURL}
                     width={64}
                     height={64}
                   />
