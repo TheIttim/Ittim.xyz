@@ -23,7 +23,7 @@ export default class Home extends React.Component {
             my project recognition more elegant.
           </p>
           <p>
-            You can contact me at <a href="mailto:ittim@ittim.xyz">TheIttim@gmail.com</a>, send a
+            You can contact me at <a href="mailto:support@ittim.xyz">Support@ittim.xyz</a>, send a
             donation via{" "}
             <a href="https://paypal.me/EthanHagan" target="_blank" rel="noopener noreferrer">
               PayPal
