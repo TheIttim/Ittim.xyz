@@ -127,7 +127,7 @@ export default class Resume extends React.Component {
                 Award - List of all JROTC ribbons/medals earned during my time in JROTC as a Cadet
                 Major. 1x American Legion Military Excellnce Medal, 1x Staff Arc, 1x Blue Honor Unit
                 Star, 7x Community Service Ribbon, 7x Parade Ribbon, 4x LET Ribbon, 3x Excellent
-                Staff Performance Ribbon, 2x TBD Ribbon, 1x TBD Ribbon 1x Color Guard Ribbon, 1x
+                Staff Performance Ribbon, 2x Flag Detail Ribbon, 1x Organization Ribbon 1x Color Guard Ribbon, 1x
                 Rifle Team Ribbon, 1x Recruiting Ribbon, 1x Service Learning Ribbon
               </p>
             </div>
