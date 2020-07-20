@@ -44,37 +44,37 @@ export default class MrMogul extends React.Component {
                 <td>Shows help for commands or categories</td>
               </tr>
               <tr>
-                <th scope="col">info</th>
+                <th scope="col">Info</th>
                 <td>None</td>
                 <td>General</td>
                 <td>Information about the server</td>
               </tr>
               <tr>
-                <th scope="col">itcast</th>
+                <th scope="col">ItCast</th>
                 <td>None</td>
                 <td>General</td>
                 <td>Information about ItCast</td>
               </tr>
               <tr>
-                <th scope="col">mrmogul</th>
+                <th scope="col">MrMogul</th>
                 <td>None</td>
                 <td>General</td>
                 <td>Information about Mr. Mogul</td>
               </tr>
               <tr>
-                <th scope="col">ping</th>
+                <th scope="col">Ping</th>
                 <td>None</td>
                 <td>General</td>
                 <td>Gets the bots ping</td>
               </tr>
               <tr>
-                <th scope="col">support</th>
+                <th scope="col">Support</th>
                 <td>None</td>
                 <td>General</td>
                 <td>Information on getting support</td>
               </tr>
               <tr>
-                <th scope="col">tycoonmogul</th>
+                <th scope="col">TycoonMogul</th>
                 <td>None</td>
                 <td>General</td>
                 <td>Information about TycoonMogul</td>
