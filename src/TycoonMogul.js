@@ -78,12 +78,6 @@ export default class TycoonMogul extends React.Component {
           <h4>
             <b>Commands</b>
           </h4>
-          <i>
-            <b>NOTICE</b>: The following table is based on TycoonMogul <b>Version 2</b>, meaning
-            some things are different from the currently released version. <br />
-            Some categories have changed, and some commands listed below either are not functioning
-            in the current version (Version 1), or are not implemented at all
-          </i>
           <table className="table table-striped table-hover">
             <thead>
               <tr>
@@ -100,18 +94,6 @@ export default class TycoonMogul extends React.Component {
                 <td>General</td>
                 <td>Lists Achievements by category</td>
               </tr>
-              {/* <tr>
-                <th scope="col">AdminPay</th>
-                <td>APay</td>
-                <td>Developers</td>
-                <td>Allows developers to add or subtract money from a user.</td>
-              </tr>
-              <tr>
-                <th scope="col">AdminXP</th>
-                <td>AXP</td>
-                <td>Developers</td>
-                <td>Allows developers to add or subtract xp from a user.</td>
-              </tr> */}
               <tr>
                 <th scope="col">Alliance</th>
                 <td>None</td>
@@ -226,15 +208,6 @@ export default class TycoonMogul extends React.Component {
                 <td>Economy</td>
                 <td>Lets user collect their daily reward base on Tycoon Level</td>
               </tr>
-              {/* <tr>
-                <th scope="col">Delete</th>
-                <td>None</td>
-                <td>Developer</td>
-                <td>
-                  Allows the developers to delete all user data for a specific user incase of bugs
-                  or exploits
-                </td>
-              </tr> */}
               <tr>
                 <th scope="col">Disable</th>
                 <td>None</td>
@@ -250,12 +223,6 @@ export default class TycoonMogul extends React.Component {
                 <td>General</td>
                 <td>Allows users to re-enable data collection/generation by TycoonMogul</td>
               </tr>
-              {/* <tr>
-                <th scope="col">Eval</th>
-                <td>None</td>
-                <td>Developer</td>
-                <td>Allows Developers to evaluate code before adding it to the bot</td>
-              </tr> */}
               <tr>
                 <th scope="col">Flip</th>
                 <td>None</td>
@@ -298,12 +265,12 @@ export default class TycoonMogul extends React.Component {
                 <td>General</td>
                 <td>Displays users TM profile</td>
               </tr>
-              {/* <tr>
-                <th scope="col">Reboot</th>
-                <td>Restart</td>
-                <td>None</td>
-                <td>Allows the developers to restart TycoonMogul safely</td>
-              </tr> */}
+              <tr>
+                <th scope="col">RequestDelete</th>
+                <td>rd</td>
+                <td>General</td>
+                <td>Allows users to request deletion of all of their TycoonMogul data</td>
+              </tr>
               <tr>
                 <th scope="col">SetPrefix</th>
                 <td>None</td>
