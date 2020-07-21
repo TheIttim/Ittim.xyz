@@ -74,6 +74,16 @@ export default class TycoonMogul extends React.Component {
             every day!
           </p>
           <hr />
+          <h4>Tutorial</h4>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/wqK1Q8-M9C8"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <hr />
 
           <h4>
             <b>Commands</b>
