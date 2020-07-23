@@ -51,9 +51,24 @@ const Alliance = (props) => {
     if (data && !data.error) {
       const members = [];
       for (const obj of data.members) {
+        let rank;
+        switch (obj.rank) {
+          case 3:
+            rank = "Leader";
+            break;
+          case 2:
+            rank = "Officer";
+            break;
+          case 1:
+            rank = "Deputy";
+            break;
+          case 0:
+            rank = "Member";
+            break;
+        }
         members.push(
           <tr>
-            <th>{obj.rank}</th>
+            <th>{rank}</th>
             <td>
               <div className="row">
                 <div className="col-3"></div>
