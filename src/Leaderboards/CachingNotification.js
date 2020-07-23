@@ -32,7 +32,7 @@ export default function CachingNotification() {
   if (data && !data.completed) {
     content = (
       <div class="alert alert-danger" role="alert">
-        Caching in progress, results may not be complete!
+        Caching in progress, results may be incomplete!
       </div>
     );
   }
