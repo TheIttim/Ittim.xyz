@@ -29,7 +29,8 @@ export default function CachingNotification() {
   const data = usePromise(`${config.apiURL}/cache/status`);
 
   let content = null;
-  if (data && !data.completed) {
+  console.log(data);
+  if (data && data.completed === false) {
     content = (
       <div class="alert alert-danger" role="alert">
         Caching in progress, results may be incomplete!
