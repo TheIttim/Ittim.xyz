@@ -107,8 +107,8 @@ export default class App extends React.Component {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/patrons" className="nav-link" activeClassName="active">
-                  Patrons
+                <NavLink to="/donors" className="nav-link" activeClassName="active">
+                  Donors
                 </NavLink>
               </li>
               <li className="nav-item">
