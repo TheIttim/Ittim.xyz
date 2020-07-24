@@ -429,3 +429,11 @@ footer .text {
 footer .copy {
   font-size: 14px;
 }
+
+.donor-paypal {
+  color: #0079c1;
+}
+
+.donor-mc {
+  color: #5b8731;
+}

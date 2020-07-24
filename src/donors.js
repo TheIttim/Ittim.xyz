@@ -20,24 +20,24 @@ export default class Patrons extends React.Component {
           <h3 style={{ marginTop: "2%" }}>Donors</h3>
           <hr />
           <div className="row">
-            <div className="col-lg-4"></div>
+            <div className="col-lg-3"></div>
             <div className="col-lg col-sm-12">
               <i className="patron-plus">Patron+</i>
             </div>
             <div className="col-lg col-sm-12">
               <i className="patron">Patron</i>
             </div>
-      <div className="col-lg col-sm-12">
-              <i className="paypal">PayPal</i>
+            <div className="col-lg col-sm-12">
+              <i className="donor-paypal">PayPal</i>
             </div>
-      <div className="col-lg col-sm-12">
-              <i className="MCDonor">Minecraft Donor</i>
+            <div className="col-lg col-sm-12">
+              <i className="donor-mc">Minecraft Donor</i>
             </div>
-            <div className="col-lg-4"></div>
+            <div className="col-lg-3"></div>
           </div>
           <br />
-          <h5>Our Patrons</h5>
-          <i>We don't have any Patrons yet; how about becoming the first?</i>
+          <h5>Our Donors</h5>
+          <i>We don't have any donors yet; how about becoming the first?</i>
           {/* <div className="patron-plus">
             <div className="row">
               <div className="col"></div>

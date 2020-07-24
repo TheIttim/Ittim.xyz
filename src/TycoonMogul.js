@@ -454,10 +454,7 @@ export default class TycoonMogul extends React.Component {
             </tbody>
           </table>
           <div className="container">
-            <i>
-              Thank You to Puyodead1#0001 for all the help with TycoonMogul v2, which is coming
-              soon!
-            </i>
+            <i>Thank You to Puyodead1#0001 for all the help with TycoonMogul v2!</i>
           </div>
           <br />
         </div>
