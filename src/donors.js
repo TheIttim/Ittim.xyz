@@ -17,7 +17,7 @@ export default class Patrons extends React.Component {
           />
         </MetaTags>
         <div class="container text-center">
-          <h3 style={{ marginTop: "2%" }}Donors</h3>
+          <h3 style={{ marginTop: "2%" }}>Donors</h3>
           <hr />
           <div className="row">
             <div className="col-lg-4"></div>

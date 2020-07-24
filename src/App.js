@@ -151,8 +151,8 @@ export default class App extends React.Component {
           <Route path="/leaderboards" exact>
             <Leaderboard />
           </Route>
-          <Route path="/patrons" exact>
-            <Patrons />
+          <Route path="/donors" exact>
+            <Donors />
           </Route>
           <Route path="/mrmogul" exact>
             <MrMogul />
