@@ -6,10 +6,10 @@ export default class Patrons extends React.Component {
     return (
       <div className="app">
         <MetaTags>
-          <title>Ittim | Patrons</title>
-          <link rel="canonical" href="https://www.ittim.xyz/patrons" />
-          <meta property="og:title" content="Ittim | Patrons" />
-          <meta property="og:url" content="https://ittim.xyz/patrons" />
+          <title>Ittim | Donors</title>
+          <link rel="canonical" href="https://www.ittim.xyz/donors" />
+          <meta property="og:title" content="Ittim | Donors" />
+          <meta property="og:url" content="https://ittim.xyz/donors" />
           <meta property="og:image" content="https://ittim.xyz/Profile_Picture.png" />\
           <meta
             property="og:description"
@@ -17,7 +17,7 @@ export default class Patrons extends React.Component {
           />
         </MetaTags>
         <div class="container text-center">
-          <h3 style={{ marginTop: "2%" }}>Patrons</h3>
+          <h3 style={{ marginTop: "2%" }}Donors</h3>
           <hr />
           <div className="row">
             <div className="col-lg-4"></div>
@@ -26,6 +26,12 @@ export default class Patrons extends React.Component {
             </div>
             <div className="col-lg col-sm-12">
               <i className="patron">Patron</i>
+            </div>
+      <div className="col-lg col-sm-12">
+              <i className="paypal">PayPal</i>
+            </div>
+      <div className="col-lg col-sm-12">
+              <i className="MCDonor">Minecraft Donor</i>
             </div>
             <div className="col-lg-4"></div>
           </div>
