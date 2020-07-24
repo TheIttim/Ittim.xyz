@@ -11,7 +11,7 @@ import { ThemeChooser } from "@puyodead1/react-bootstrap-theme-switcher/lib/Them
 import "./Styles.css";
 import Leaderboard from "./Leaderboard";
 import Alliance from "./Alliance";
-import Patrons from "./Patrons";
+import Donors from "./donors";
 import MrMogul from "./MrMogul";
 
 const PageNotFound = () => {
