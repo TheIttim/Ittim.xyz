@@ -52,7 +52,7 @@ export default class TycoonMogul extends React.Component {
           </div>
           <br />
           <p>
-            TycoonMogul is a Discord bot created with the help of a friend. The premise is like a
+            TycoonMogul is a Discord bot created with the help of friends. The premise is like a
             Tycoon game, such as{" "}
             <a
               href="https://store.steampowered.com/app/346900/AdVenture_Capitalist/"
@@ -68,10 +68,9 @@ export default class TycoonMogul extends React.Component {
               Discord Verified
             </a>{" "}
             bot, so you can trust it with the minimal amount of data it collects! We are also
-            working on certifying TycoonMogul on Discord Bot Lists as well, which will allow us to
-            support vote rewards! TycoonMogul is on 8 bot lists, 7 websites, 5 certification
-            programs, and has completed 1 certification! We are improving and certifying TycoonMogul
-            every day!
+            working on certifying TycoonMogul on every Discord Bot List we can find, which will
+            allow us to show him off even more! We are improving and certifying TycoonMogul every
+            day!
           </p>
           <hr />
           <h4>Tutorial</h4>
