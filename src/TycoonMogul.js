@@ -52,26 +52,16 @@ export default class TycoonMogul extends React.Component {
           </div>
           <br />
           <p>
-            TycoonMogul is a Discord bot created with the help of a friend. The premise is like a
-            Tycoon game, such as{" "}
-            <a
+            TycoonMogul is a Discord bot created with the help of a friend. The premise is like a Tycoon game, such as <a href="https://bit.ly/2Oi0QaZ" target="_blank" rel="noopener noreferrer">
+              Discord Verified
+            </a>{" "}
+<a
               href="https://store.steampowered.com/app/346900/AdVenture_Capitalist/"
               target="_blank"
               rel="noopener noreferrer"
             >
               AdVenture Capitalist
-            </a>
-            : Create a Tycoon, earn money, and upgrade the Tycoon with that money. You can even
-            create alliances with other Tycoon owners. Oh, and there's achievements! Still not
-            convinced? TycoonMogul is a{" "}
-            <a href="https://bit.ly/2Oi0QaZ" target="_blank" rel="noopener noreferrer">
-              Discord Verified
-            </a>{" "}
-            bot, so you can trust it with the minimal amount of data it collects! We are also
-            working on certifying TycoonMogul on Discord Bot Lists as well, which will allow us to
-            support vote rewards! TycoonMogul is on 8 bot lists, 7 websites, 5 certification
-            programs, and has completed 1 certification! We are improving and certifying TycoonMogul
-            every day!
+            </a>: Create a Tycoon, earn money, and upgrade the Tycoon with that money. You can even create alliances with other Tycoon owners. Oh, and there's achievements! Still not convinced? TycoonMogul is a Discord Verified bot, so you can trust it with the minimal amount of data it collects! We are also working on certifying TycoonMogul on Discord Bot Lists as well, which will allow us to support vote rewards! TycoonMogul is on 8 bot lists, 7 websites, 5 certification programs, and has completed 1 certification! We are improving and certifying TycoonMogul every day!
           </p>
           <hr />
           <h4>Tutorial</h4>
