@@ -51,7 +51,8 @@ export default function Footer() {
             </div>
             <div className="col-md col-sm-12">
               <p className="text">
-                Visit our <a href="https://twitter.com/MogulDevs">Twitter</a>
+                Visit our <a href="https://twitter.com/MogulDevs" target="blank_"
+                  rel="noopener noreferrer">Twitter</a>
               </p>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
-import MogulDevelopment from "./MogulDevelopment";
+import Contact from "./Contact";
 import Home from "./Home";
 import ItCast from "./ItCast";
 import ProfilePicture from "./pfp.png";
@@ -13,6 +13,7 @@ import Leaderboard from "./Leaderboard";
 import Alliance from "./Alliance";
 import Donors from "./Donors";
 import MrMogul from "./MrMogul";
+import PrivacyPolicy from "./PrivacyPolicy";
 
 const PageNotFound = () => {
   return (
@@ -61,8 +62,8 @@ export default class App extends React.Component {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/moguldevelopment" className="nav-link" activeClassName="active">
-                  Mogul Development
+                <NavLink to="/contact" className="nav-link" activeClassName="active">
+                  Contact
                 </NavLink>
               </li>
               <li className="nav-item dropdown dropdown1">
@@ -94,6 +95,9 @@ export default class App extends React.Component {
                   >
                     Invite
                   </a>
+                  <NavLink to="/PrivacyPolicy" className="dropdown-item" activeClassName="active">
+                    Privacy Policy
+                  </NavLink>
                 </div>
               </li>
               <li className="nav-item">
@@ -139,8 +143,8 @@ export default class App extends React.Component {
           <Route path="/status" exact>
             <Status />
           </Route>
-          <Route path="/moguldevelopment" exact>
-            <MogulDevelopment />
+          <Route path="/contact" exact>
+            <Contact />
           </Route>
           <Route path="/resume" exact>
             <Resume />
@@ -150,6 +154,9 @@ export default class App extends React.Component {
           </Route>
           <Route path="/leaderboards" exact>
             <Leaderboard />
+          </Route>
+          <Route path="/PrivacyPolicy" exact>
+            <PrivacyPolicy />
           </Route>
           <Route path="/donors" exact>
             <Donors />
