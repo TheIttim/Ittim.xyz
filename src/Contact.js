@@ -21,10 +21,12 @@ export default class contact extends React.Component {
             Contact
           </h3>
           <p>
-            Have an issue, wanna join our team?<br></br>
-            For general support email <a href="mailto:support@ittim.xyz">Support@ittim.xyz</a>.<br></br> 
-            For development related questions, or to join our development team, email our Lead Developer at <a href="mailto:puyodead1@ittim.xyz">Puyodead1@ittim.xyz</a>.<br></br>
-            For any business, legal, or other staff matters you can email me directly at <a href="mailto:ittim@ittim.xyz">Ittim@ittim.xyz</a>.<br></br>
+            Have an issue or wanna join our team?<br></br>
+            For general support email <a href="mailto:support@ittim.xyz">support@ittim.xyz</a>.<br></br> 
+            For development related questions, or to join our development team, email our Development Team Lead at <a href="mailto:puyodead1@ittim.xyz">puyodead1@ittim.xyz</a>.<br></br>
+            For Moderation related questions, or for any reports about our moderation team, including joining, email our Moderation Team Lead at <a href="mailto:xiuh@ittim.xyz">xiuh@ittim.xyz</a>.<br></br>
+            To appeal a server ban or product blacklist, please send an email to <a href="mailto:appeals@ittim.xyz">appeals@ittim.xyz</a>, explaining why you should be unbanned or unblacklisted.<br></br>
+            For any business, legal, or other matters you can email me directly at <a href="mailto:ittim@ittim.xyz">ittim@ittim.xyz</a>.<br></br>
             Or, if you just want to keep up with our team, you can check us out on <a href="https://twitter.com/MogulDevs">Twitter</a>, or hang out with us on <a href="https://discord.gg/Ef2AQns" target="blank_" rel="noopener noreferrer">
             Discord</a>!
           </p>
