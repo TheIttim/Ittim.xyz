@@ -21,7 +21,9 @@ export default class PrivacyPolicy extends React.Component {
             Privacy Policy
           </h3>
           <p>
-          We only retain collected information(user IDs) for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification. 
+            We only collect the necessary information needed to prodive you with access to our services as you use them. This includes data like your Discord ID, Profile Picture, & Username.
+          <br></br><br></br>
+          We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification. 
           We don’t share any personally identifying information publicly or with third-parties, except when required to by law.
 <br></br><br></br>
 Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.
