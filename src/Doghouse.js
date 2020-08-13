@@ -46,26 +46,25 @@ export default class Doghouse extends React.Component {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="col">Achievements</th>
-                <td>Awards, Trophies, & Badges</td>
-                <td>General</td>
-                <td>Lists Achievements by category</td>
-              </tr>
-              <tr>
-                <th scope="col">Alliance</th>
+            <tr>
+                <th scope="col">Adopt</th>
                 <td>None</td>
-                <td>Alliances</td>
+                <td>Pet</td>
                 <td>
-                  Displays information about user’s alliance, if they have one, otherwise notifies
-                  user to join alliance first
+                Adopt a dog from the shelter! They have three to choose from, so come back later if they aren't the breed you want.
                 </td>
               </tr>
               <tr>
-                <th scope="col">AllianceCreate</th>
-                <td>ACreate</td>
-                <td>Alliances</td>
-                <td>Takes user through steps of creating an alliance</td>
+                <th scope="col">Balance</th>
+                <td>None</td>
+                <td>Statistics</td>
+                <td>each time you answer correctly, you earn some money. How much do you have?</td>
+              </tr>
+              <tr>
+                <th scope="col">Bet</th>
+                <td>None</td>
+                <td>Events</td>
+                <td>bet on the outcome of a dog race for a chance to get your money back plus more!</td>
               </tr>
               <tr>
                 <th scope="col">AllianceDelete</th>
