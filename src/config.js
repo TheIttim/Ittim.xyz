@@ -1,5 +1,5 @@
 export default {
-  apiURL: "https://api.ittim.xyz",
+  apiURL: "https://api.moguldevs.xyz",
   //bot_url: "http://127.0.0.1",
   endpoints: {
     stats: "/api/stats",

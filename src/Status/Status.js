@@ -163,12 +163,12 @@ export default class Status extends React.Component {
       <div className="app">
         <MetaTags>
           <title>Ittim | Status</title>
-          <link rel="canonical" href="https://www.ittim.xyz/status" />
+          <link rel="canonical" href="https://www.moguldevs.xyz/status" />
           <meta property="og:title" content="Ittim | Status" />
-          <meta property="og:url" content="https://ittim.xyz/status" />
+          <meta property="og:url" content="https://moguldevs.xyz/status" />
           <meta
             property="og:description"
-            content="Welcome to Ittim.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+            content="Welcome to moguldevs.xyz, the website for all of Mogul Development's projects, like TycoonMogul, Doghouse, & Minebot!"
           />
         </MetaTags>
         {content}

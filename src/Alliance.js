@@ -169,13 +169,13 @@ const Alliance = (props) => {
     <div className="app">
       <MetaTags>
         <title>Ittim | Alliance Viewer</title>
-        <link rel="canonical" href={`https://www.ittim.xyz/alliances/${id}`} />
+        <link rel="canonical" href={`https://www.moguldevs.xyz/alliances/${id}`} />
         <meta property="og:title" content="Ittim | Alliance Viewer" />
-        <meta property="og:url" content={`https://ittim.xyz/alliances/${id}`} />
-        <meta property="og:image" content="https://ittim.xyz/TM_icon.png" />
+        <meta property="og:url" content={`https://moguldevs.xyz/alliances/${id}`} />
+        <meta property="og:image" content="https://moguldevs.xyz/TM_icon.png" />
         <meta
           property="og:description"
-          content="Welcome to Ittim.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
         />
       </MetaTags>
       {content}

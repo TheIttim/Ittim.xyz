@@ -7,13 +7,13 @@ export default class PrivacyPolicy extends React.Component {
       <div className="app">
         <MetaTags>
           <title>Ittim | Privacy Policy</title>
-          <link rel="canonical" href="https://www.ittim.xyz/privacypolicy" />
+          <link rel="canonical" href="https://www.moguldevs.xyz/privacypolicy" />
           <meta property="og:title" content="Ittim | Privacy Policy" />
-          <meta property="og:url" content="https://ittim.xyz/privacypolicy" />
-          <meta property="og:image" content="https://ittim.xyz/Profile_Picture.png" />
+          <meta property="og:url" content="https://moguldevs.xyz/privacypolicy" />
+          <meta property="og:image" content="https://moguldevs.xyz/Profile_Picture.png" />
           <meta
             property="og:description"
-            content="Welcome to Ittim.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
           />
         </MetaTags>
         <div className="container text-center">

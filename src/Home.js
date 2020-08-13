@@ -7,13 +7,13 @@ export default class Home extends React.Component {
       <div className="app">
         <MetaTags>
           <title>Ittim | Homepage</title>
-          <link rel="canonical" href="https://www.ittim.xyz/" />
+          <link rel="canonical" href="https://www.moguldevs.xyz/" />
           <meta property="og:title" content="Ittim | Homepage" />
-          <meta property="og:url" content="https://ittim.xyz/" />
-          <meta property="og:image" content="https://ittim.xyz/Profile_Picture.png" />
+          <meta property="og:url" content="https://moguldevs.xyz/" />
+          <meta property="og:image" content="https://moguldevs.xyz/Profile_Picture.png" />
           <meta
             property="og:description"
-            content="Welcome to Ittim.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
           />
         </MetaTags>
         <div className="container text-center">
@@ -23,7 +23,7 @@ export default class Home extends React.Component {
             my project recognition more elegant.
           </p>
           <p>
-            You can contact me at <a href="mailto:support@ittim.xyz">Support@ittim.xyz</a>, send a
+            You can contact me at <a href="mailto:support@moguldevs.xyz">Support@moguldevs.xyz</a>, send a
             donation via{" "}
             <a href="https://paypal.me/EthanHagan" target="_blank" rel="noopener noreferrer">
               PayPal

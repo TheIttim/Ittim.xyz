@@ -7,13 +7,13 @@ export default class MrMogul extends React.Component {
       <div>
         <MetaTags>
           <title>Ittim | Mr. Mogul</title>
-          <link rel="canonical" href="https://www.ittim.xyz/mrmogul" />
+          <link rel="canonical" href="https://www.moguldevs.xyz/mrmogul" />
           <meta property="og:title" content="Ittim | Mr. Mogul" />
-          <meta property="og:url" content="https://ittim.xyz/mrmogul" />
-          <meta property="og:image" content="https://ittim.xyz/TM_icon.png" />
+          <meta property="og:url" content="https://moguldevs.xyz/mrmogul" />
+          <meta property="og:image" content="https://moguldevs.xyz/TM_icon.png" />
           <meta
             property="og:description"
-            content="Welcome to Ittim.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
           />
         </MetaTags>
         <div className="container text-center">

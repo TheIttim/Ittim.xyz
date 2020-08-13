@@ -35,13 +35,13 @@ export default class Leaderboard extends React.Component {
       <div className="app">
         <MetaTags>
           <title>Ittim | Leaderboard</title>
-          <link rel="canonical" href="https://www.ittim.xyz/leaderboard/balance" />
+          <link rel="canonical" href="https://www.moguldevs.xyz/leaderboard/balance" />
           <meta property="og:title" content="Ittim | Leaderboard" />
-          <meta property="og:url" content="https://ittim.xyz/leaderboard/balance" />
-          <meta property="og:image" content="https://ittim.xyz/TM_icon.png" />
+          <meta property="og:url" content="https://moguldevs.xyz/leaderboard/balance" />
+          <meta property="og:image" content="https://moguldevs.xyz/TM_icon.png" />
           <meta
             property="og:description"
-            content="Welcome to Ittim.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
           />
         </MetaTags>
         <div className="container text-center">

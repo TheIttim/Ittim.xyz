@@ -7,13 +7,13 @@ export default class Donors extends React.Component {
       <div className="app">
         <MetaTags>
           <title>Ittim | Donors</title>
-          <link rel="canonical" href="https://www.ittim.xyz/donors" />
+          <link rel="canonical" href="https://www.moguldevs.xyz/donors" />
           <meta property="og:title" content="Ittim | Donors" />
-          <meta property="og:url" content="https://ittim.xyz/donors" />
-          <meta property="og:image" content="https://ittim.xyz/Profile_Picture.png" />\
+          <meta property="og:url" content="https://moguldevs.xyz/donors" />
+          <meta property="og:image" content="https://moguldevs.xyz/Profile_Picture.png" />\
           <meta
             property="og:description"
-            content="Welcome to Ittim.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
           />
         </MetaTags>
         <div class="container text-center">

@@ -2,11 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
 import Contact from "./Contact";
 import Home from "./Home";
-import ItCast from "./ItCast";
 import ProfilePicture from "./pfp.png";
 import Status from "./Status/Status";
 import TycoonMogul from "./TycoonMogul";
-import Resume from "./Resume";
 import { ThemeChooser } from "@puyodead1/react-bootstrap-theme-switcher/lib/ThemeChooser";
 import "./Styles.css";
 import Leaderboard from "./Leaderboard";
@@ -14,6 +12,7 @@ import Alliance from "./Alliance";
 import Donors from "./Donors";
 import MrMogul from "./MrMogul";
 import PrivacyPolicy from "./PrivacyPolicy";
+import Doghouse from "./Doghouse";
 
 const PageNotFound = () => {
   return (
@@ -57,13 +56,10 @@ export default class App extends React.Component {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/itcast" className="nav-link" activeClassName="active">
-                  ItCast
-                </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink to="/contact" className="nav-link" activeClassName="active">
-                  Contact
+                  About & Contact
                 </NavLink>
               </li>
               <li className="nav-item dropdown dropdown1">
@@ -99,6 +95,11 @@ export default class App extends React.Component {
                     Privacy Policy
                   </NavLink>
                 </div>
+                </li>
+                <li className="nav-item">
+                <NavLink to="/Doghouse" className="nav-link" activeClassName="active">
+                  Doghouse
+                </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink to="/mrmogul" className="nav-link" activeClassName="active">
@@ -106,9 +107,6 @@ export default class App extends React.Component {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/resume" className="nav-link" activeClassName="active">
-                  Resume
-                </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink to="/donors" className="nav-link" activeClassName="active">
@@ -134,9 +132,6 @@ export default class App extends React.Component {
           <Route path="/" exact>
             <Home />
           </Route>
-          <Route path="/itcast" exact>
-            <ItCast />
-          </Route>
           <Route path="/tycoonmogul" exact>
             <TycoonMogul />
           </Route>
@@ -146,20 +141,20 @@ export default class App extends React.Component {
           <Route path="/contact" exact>
             <Contact />
           </Route>
-          <Route path="/resume" exact>
-            <Resume />
-          </Route>
           <Route path="/status" exact>
             <Status />
           </Route>
           <Route path="/leaderboards" exact>
             <Leaderboard />
           </Route>
-          <Route path="/PrivacyPolicy" exact>
+          <Route path="/privacypolicy" exact>
             <PrivacyPolicy />
           </Route>
           <Route path="/donors" exact>
             <Donors />
+          </Route>
+          <Route path="/doghouse" exact>
+            <Doghouse />
           </Route>
           <Route path="/mrmogul" exact>
             <MrMogul />
