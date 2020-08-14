@@ -95,7 +95,7 @@ export default class contact extends React.Component {
                 <tr>
                   <th scope="row">Business, Legal or Other</th>
                   <th scope="col">Ittim</th>
-                  <th scope="col">CEO, CFO, COO</th>
+                  <th scope="col">CEO, CFO, COO, CPO, CRO, CGO</th>
                   <th scope="col">
                     <a href="mailto:ittim@moguldevs.xyz">ittim@moguldevs.xyz</a>
                   </th>
