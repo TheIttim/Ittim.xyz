@@ -70,7 +70,7 @@ export default class contact extends React.Component {
                   >
                     Doghouse
                   </a>
-                  , and is the most recent addition to Mogul Development!
+                  which is the most recent addition to Mogul Development!
                 </li>
               </ul>
             </p>
@@ -103,7 +103,7 @@ export default class contact extends React.Component {
                 <tr>
                   <th scope="row">Moderation Questions & Doghouse Support</th>
                   <th scope="col">XiuhcoatlSlayer</th>
-                  <th scope="col">Moderation Team Lead, Doghouse Owner & Developer</th>
+                  <th scope="col">CHRO, Moderation Team Lead, Doghouse Owner & Developer</th>
                   <th scope="col">
                     <a href="mailto:xiuh@moguldevs.xyz">xiuh@moguldevs.xyz</a>
                   </th>
@@ -111,7 +111,7 @@ export default class contact extends React.Component {
                 <tr>
                   <th scope="row">Development Questions</th>
                   <th scope="col">Puyodead1</th>
-                  <th scope="col">Development Team Lead, CTO</th>
+                  <th scope="col">CIO, CTO, CISO, CSO, CDO</th>
                   <th scope="col">
                     <a href="mailto:puyodead1@moguldevs.xyz">puyodead1@moguldevs.xyz</a>
                   </th>
