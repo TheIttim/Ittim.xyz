@@ -3,12 +3,12 @@ import React, { useState, useEffect } from "react";
 import config from "../config";
 
 export default function BalanceLB() {
-  function usePromise(url) {
+  function usePromise() {
     const [value, setState] = useState(null);
     useEffect(() => {
       let isMounted = true;
 
-      fetch(url)
+      fetch(`${config.apiURL}${config.endpoints.leaderboards}/userlevel`)
         .then(async (res) => {
           if (isMounted) {
             const d = await res.json();
@@ -31,7 +31,9 @@ export default function BalanceLB() {
                           height={64}
                         />
                       </div>
-                      <div className="col-lg-3">{row.username}</div>
+                      <div className="col-lg-3">
+                        <a href={`/user/${row.id}`}>{row.username}</a>
+                      </div>
                       <div className="col-lg-3 col-sm-2"></div>
                     </div>
                   </td>
@@ -52,7 +54,7 @@ export default function BalanceLB() {
     return value;
   }
 
-  const data = usePromise(`${config.apiURL}${config.endpoints.leaderboards}/userlevel`);
+  const data = usePromise();
 
   let content = <h3>Loading Leaderboard Information....</h3>;
   if (data && !data.error) {

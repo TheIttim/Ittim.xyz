@@ -7,12 +7,12 @@ export default function BalanceLB() {
     window.location.assign(`/alliances/${e.target.dataset.id}`);
   }
 
-  function usePromise(url) {
+  function usePromise() {
     const [value, setState] = useState(null);
     useEffect(() => {
       let isMounted = true;
 
-      fetch(url)
+      fetch(`${config.apiURL}${config.endpoints.leaderboards}/alliancemembers`)
         .then(async (res) => {
           if (isMounted) {
             const d = await res.json();
@@ -45,8 +45,7 @@ export default function BalanceLB() {
     return value;
   }
 
-  const data = usePromise(`${config.apiURL}${config.endpoints.leaderboards}/alliancemembers`);
-  console.log(data);
+  const data = usePromise();
 
   let content = <h3>Loading Leaderboard Information....</h3>;
   if (data && !data.error) {

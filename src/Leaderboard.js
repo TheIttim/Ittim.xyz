@@ -2,7 +2,6 @@ import React from "react";
 import MetaTags from "react-meta-tags";
 import AllianceMemberLB from "./Leaderboards/AllianceMembers.js";
 import BalanceLB from "./Leaderboards/Balance";
-import CachingNotification from "./Leaderboards/CachingNotification.js";
 import TycoonLevelLB from "./Leaderboards/TycoonLevel.js";
 import UserLevelLB from "./Leaderboards/UserLevel.js";
 
@@ -95,7 +94,6 @@ export default class Leaderboard extends React.Component {
             </div>
             <div className="col-3"></div>
           </div>
-          <CachingNotification />
           {a}
         </div>
       </div>

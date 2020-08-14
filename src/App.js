@@ -12,6 +12,7 @@ import Alliance from "./Alliance";
 import Donors from "./Donors";
 import PrivacyPolicy from "./PrivacyPolicy";
 import Doghouse from "./Doghouse";
+import Profile from "./Profile";
 
 const PageNotFound = () => {
   return (
@@ -151,6 +152,7 @@ export default class App extends React.Component {
             <Doghouse />
           </Route>
           <Route name="allianceviewer" path="/alliances/*" component={Alliance} />
+          <Route name="profileviewer" path="/user/*" component={Profile} />
           <Route component={PageNotFound}></Route>
         </Switch>
       </Router>
