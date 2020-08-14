@@ -168,7 +168,7 @@ const Alliance = (props) => {
   return (
     <div className="app">
       <MetaTags>
-        <title>Ittim | Alliance Viewer</title>
+        <title>Mogul Development | Alliance Viewer</title>
         <link rel="canonical" href={`https://www.moguldevs.xyz/alliances/${id}`} />
         <meta property="og:title" content="Ittim | Alliance Viewer" />
         <meta property="og:url" content={`https://moguldevs.xyz/alliances/${id}`} />

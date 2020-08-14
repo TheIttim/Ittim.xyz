@@ -10,7 +10,6 @@ import "./Styles.css";
 import Leaderboard from "./Leaderboard";
 import Alliance from "./Alliance";
 import Donors from "./Donors";
-import MrMogul from "./MrMogul";
 import PrivacyPolicy from "./PrivacyPolicy";
 import Doghouse from "./Doghouse";
 
@@ -55,8 +54,7 @@ export default class App extends React.Component {
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item">
-              </li>
+              <li className="nav-item"></li>
               <li className="nav-item">
                 <NavLink to="/contact" className="nav-link" activeClassName="active">
                   About & Contact
@@ -65,7 +63,7 @@ export default class App extends React.Component {
               <li className="nav-item dropdown dropdown1">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  href="/tycoonmogul"
                   id="navbarDropdown"
                   role="button"
                   data-toggle="dropdown"
@@ -91,23 +89,14 @@ export default class App extends React.Component {
                   >
                     Invite
                   </a>
-                  <NavLink to="/PrivacyPolicy" className="dropdown-item" activeClassName="active">
-                    Privacy Policy
-                  </NavLink>
                 </div>
-                </li>
-                <li className="nav-item">
-                <NavLink to="/Doghouse" className="nav-link" activeClassName="active">
+              </li>
+              <li className="nav-item">
+                <NavLink to="/doghouse" className="nav-link" activeClassName="active">
                   Doghouse
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink to="/mrmogul" className="nav-link" activeClassName="active">
-                  Mr. Mogul
-                </NavLink>
-              </li>
-              <li className="nav-item">
-              </li>
+              <li className="nav-item"></li>
               <li className="nav-item">
                 <NavLink to="/donors" className="nav-link" activeClassName="active">
                   Donors
@@ -117,6 +106,11 @@ export default class App extends React.Component {
                 <a href="https://discord.gg/Ef2AQns" className="nav-link" target="blank_">
                   Discord Server
                 </a>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/privacy" className="nav-link" activeClassName="active">
+                  Privacy Policy
+                </NavLink>
               </li>
             </ul>
 
@@ -147,7 +141,7 @@ export default class App extends React.Component {
           <Route path="/leaderboards" exact>
             <Leaderboard />
           </Route>
-          <Route path="/privacypolicy" exact>
+          <Route path="/privacy" exact>
             <PrivacyPolicy />
           </Route>
           <Route path="/donors" exact>
@@ -155,9 +149,6 @@ export default class App extends React.Component {
           </Route>
           <Route path="/doghouse" exact>
             <Doghouse />
-          </Route>
-          <Route path="/mrmogul" exact>
-            <MrMogul />
           </Route>
           <Route name="allianceviewer" path="/alliances/*" component={Alliance} />
           <Route component={PageNotFound}></Route>

@@ -162,7 +162,7 @@ export default class Status extends React.Component {
     return (
       <div className="app">
         <MetaTags>
-          <title>Ittim | Status</title>
+          <title>Mogul Development | Status</title>
           <link rel="canonical" href="https://www.moguldevs.xyz/status" />
           <meta property="og:title" content="Ittim | Status" />
           <meta property="og:url" content="https://moguldevs.xyz/status" />

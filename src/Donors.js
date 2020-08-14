@@ -6,7 +6,7 @@ export default class Donors extends React.Component {
     return (
       <div className="app">
         <MetaTags>
-          <title>Ittim | Donors</title>
+          <title>Mogul Development | Donors</title>
           <link rel="canonical" href="https://www.moguldevs.xyz/donors" />
           <meta property="og:title" content="Ittim | Donors" />
           <meta property="og:url" content="https://moguldevs.xyz/donors" />
@@ -29,9 +29,6 @@ export default class Donors extends React.Component {
             </div>
             <div className="col-lg col-sm-12">
               <i className="donor-paypal">PayPal</i>
-            </div>
-            <div className="col-lg col-sm-12">
-              <i className="donor-mc">Minecraft Donor</i>
             </div>
             <div className="col-lg-3"></div>
           </div>

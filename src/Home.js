@@ -6,7 +6,7 @@ export default class Home extends React.Component {
     return (
       <div className="app">
         <MetaTags>
-          <title>Ittim | Homepage</title>
+          <title>Mogul Development | Homepage</title>
           <link rel="canonical" href="https://www.moguldevs.xyz/" />
           <meta property="og:title" content="Ittim | Homepage" />
           <meta property="og:url" content="https://moguldevs.xyz/" />
@@ -23,8 +23,8 @@ export default class Home extends React.Component {
             my project recognition more elegant.
           </p>
           <p>
-            You can contact me at <a href="mailto:support@moguldevs.xyz">Support@moguldevs.xyz</a>, send a
-            donation via{" "}
+            You can contact me at <a href="mailto:support@moguldevs.xyz">support@moguldevs.xyz</a>,
+            send a donation via{" "}
             <a href="https://paypal.me/EthanHagan" target="_blank" rel="noopener noreferrer">
               PayPal
             </a>

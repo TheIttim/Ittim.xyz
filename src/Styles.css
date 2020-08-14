@@ -373,6 +373,7 @@ footer {
   height: inherit;
   width: inherit;
   background-color: #303030;
+  color: rgb(255, 255, 255);
 }
 
 .leaderboard-nav .btn-first {
@@ -436,4 +437,9 @@ footer .copy {
 
 .donor-mc {
   color: #5b8731;
+}
+
+.privacyp {
+  line-height: 1.8;
+  margin: 0 0 1.4rem 0;
 }

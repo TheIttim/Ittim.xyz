@@ -35,9 +35,9 @@ export default function Footer() {
                 </a>
               </p>
             </div>
-            <div className="col-md-3 col-sm-12">
+            <div className="col-md-4 col-sm-12">
               <p>
-                <i className="text-muted copy">Copyright &copy; 2020 Puyodead1 & Ittim</i>
+                <i className="text-muted copy">Copyright &copy; 2020 Mogul Development LLC</i>
               </p>
             </div>
             <div className="col-md col-sm-12">
@@ -51,8 +51,10 @@ export default function Footer() {
             </div>
             <div className="col-md col-sm-12">
               <p className="text">
-                Visit our <a href="https://twitter.com/MogulDevs" target="blank_"
-                  rel="noopener noreferrer">Twitter</a>
+                Visit our{" "}
+                <a href="https://twitter.com/MogulDevs" target="blank_" rel="noopener noreferrer">
+                  Twitter
+                </a>
               </p>
             </div>
           </div>

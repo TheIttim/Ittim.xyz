@@ -6,7 +6,7 @@ export default class Doghouse extends React.Component {
     return (
       <div>
         <MetaTags>
-          <title>Ittim | Doghouse</title>
+          <title>Mogul Development | Doghouse</title>
           <link rel="canonical" href="https://www.moguldevs.xyz/doghouse" />
           <meta property="og:title" content="Ittim | Doghouse" />
           <meta property="og:url" content="https://moguldevs.xyz/doghouse" />
@@ -21,15 +21,24 @@ export default class Doghouse extends React.Component {
             Doghouse
           </h3>
           <br />
-          <p>Know a lot about dog breeds or want to learn more? <br />
-              Use this bot to generate a picture of a dog and then respond with the breed that is in the picture. If you are correct, you'll earn some money! If not, try again!
-            Doghouse is a{" "}
+          <p>
+            Know a lot about dog breeds or want to learn more? <br />
+            Use this bot to generate a picture of a dog and then respond with the breed that is in
+            the picture. If you are correct, you'll earn some money! If not, try again! Doghouse is
+            a{" "}
             <a href="https://bit.ly/2Oi0QaZ" target="_blank" rel="noopener noreferrer">
               Discord Verified
             </a>{" "}
-            bot, so you can trust it with the minimal amount of data it collects; and Of course, you can vote on{" "}<a href="https://top.gg/bot/684871736797429777/vote" target="_blank" rel="noopener noreferrer">
+            bot, so you can trust it with the minimal amount of data it collects; and Of course, you
+            can vote on{" "}
+            <a
+              href="https://top.gg/bot/684871736797429777/vote"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Top.gg
-            </a>{" "} for Doghouse to earn some cash!
+            </a>{" "}
+            for Doghouse to earn some cash!
           </p>
           <hr />
 
@@ -46,12 +55,13 @@ export default class Doghouse extends React.Component {
               </tr>
             </thead>
             <tbody>
-            <tr>
+              <tr>
                 <th scope="col">Adopt</th>
                 <td>None</td>
                 <td>Pet</td>
                 <td>
-                Adopt a dog from the shelter! They have three to choose from, so come back later if they aren't the breed you want.
+                  Adopt a dog from the shelter! They have three to choose from, so come back later
+                  if they aren't the breed you want.
                 </td>
               </tr>
               <tr>
@@ -64,7 +74,9 @@ export default class Doghouse extends React.Component {
                 <th scope="col">Bet</th>
                 <td>None</td>
                 <td>Events</td>
-                <td>bet on the outcome of a dog race for a chance to get your money back plus more!</td>
+                <td>
+                  bet on the outcome of a dog race for a chance to get your money back plus more!
+                </td>
               </tr>
               <tr>
                 <th scope="col">AllianceDelete</th>
@@ -296,8 +308,8 @@ export default class Doghouse extends React.Component {
               </tr>
             </tbody>
           </table>
-          </div>
-          </div>
+        </div>
+      </div>
     );
   }
 }

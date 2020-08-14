@@ -34,7 +34,7 @@ export default class Leaderboard extends React.Component {
     return (
       <div className="app">
         <MetaTags>
-          <title>Ittim | Leaderboard</title>
+          <title>Mogul Development | Leaderboards</title>
           <link rel="canonical" href="https://www.moguldevs.xyz/leaderboard/balance" />
           <meta property="og:title" content="Ittim | Leaderboard" />
           <meta property="og:url" content="https://moguldevs.xyz/leaderboard/balance" />
@@ -59,7 +59,7 @@ export default class Leaderboard extends React.Component {
                   Balance
                 </button>
               </div>
-              <div className="leaderboard-section col">
+              <div className="leaderboard-section col" style={{ color: "#ffffff" }}>
                 <button
                   className={`leaderboard-link btn ${
                     this.state.type === "userlevel" ? "leaderboardnav-active" : ""
