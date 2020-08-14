@@ -1,9 +1,8 @@
 FROM nginx
 EXPOSE 80
 
-RUN rm /etc/nginx/conf.d/*
-RUN rm /etc/nginx/nginx.conf
-
-COPY nginx/nginx.conf /etc/nginx/nginx.conf
+RUN mkdir /etc/ssl
+COPY /etc/ssl/moguldevs.xyz.key /etc/ssl/moguldevs.xyz.key
+COPY /etc/ssl/moguldevs.xyz.pem /etc/ssl/moguldevs.xyz.pem
 
 COPY build/ /etc/nginx/html
