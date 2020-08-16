@@ -57,7 +57,7 @@ export default class Doghouse extends React.Component {
             <tbody>
               <tr>
                 <th scope="col">Adopt</th>
-                <td>None</td>
+                <td>a</td>
                 <td>Pet</td>
                 <td>
                   Adopt a dog from the shelter! They have three to choose from, so come back later
@@ -66,245 +66,119 @@ export default class Doghouse extends React.Component {
               </tr>
               <tr>
                 <th scope="col">Balance</th>
-                <td>None</td>
+                <td>b, bal</td>
                 <td>Statistics</td>
-                <td>each time you answer correctly, you earn some money. How much do you have?</td>
+                <td>Each time you answer correctly, you earn some money. How much do you have?</td>
               </tr>
               <tr>
                 <th scope="col">Bet</th>
                 <td>None</td>
                 <td>Events</td>
                 <td>
-                  bet on the outcome of a dog race for a chance to get your money back plus more!
+                  Bet on the outcome of a dog race for a chance to get your money back plus more!
                 </td>
               </tr>
               <tr>
-                <th scope="col">AllianceDelete</th>
-                <td>ADelete</td>
-                <td>Alliances</td>
-                <td>Allows Alliance Leader to delete the alliance</td>
+                <th scope="col">Cooldowns</th>
+                <td>cd, cds, cooldown</td>
+                <td>Statistics</td>
+                <td>Shows you all of your cooldowns for commands.</td>
               </tr>
               <tr>
-                <th scope="col">AllianceDemote</th>
-                <td>ADemote</td>
-                <td>Alliances</td>
-                <td>
-                  Allows Alliance Leader OR Officers to Demote Members (Leader {">"} Officer
-                  {">"} Deputy {">"} Member)
-                </td>
-              </tr>
-              <tr>
-                <th scope="col">AllianceDescription</th>
-                <td>ADesc & ADescription</td>
-                <td>Alliances</td>
-                <td>Allows Alliance Leader to set description of alliance</td>
-              </tr>
-              <tr>
-                <th scope="col">AllianceDonate</th>
-                <td>ADonate</td>
-                <td>Alliances</td>
-                <td>
-                  Allows Alliance Members to donate to their alliance's funds, allowing the alliance
-                  to be leveled up
-                </td>
-              </tr>
-              <tr>
-                <th scope="col">AllianceInvite</th>
-                <td>AInvite & ARecruit</td>
-                <td>Alliances</td>
-                <td>
-                  Allows Alliance Leaders, Officers, or Deputies to invite potential new members to
-                  the alliance
-                </td>
-              </tr>
-              <tr>
-                <th scope="col">AllianceKick</th>
-                <td>AKick</td>
-                <td>Alliances</td>
-                <td>Allows Alliance Leaders or Officers to kick members from their alliance</td>
-              </tr>
-              <tr>
-                <th scope="col">AllianceLeave</th>
-                <td>ALeave</td>
-                <td>Alliances</td>
-                <td>Leaves the user's current alliance</td>
-              </tr>
-              <tr>
-                <th scope="col">AllianceLevelUp</th>
-                <td>ALU</td>
-                <td>Alliances</td>
-                <td>
-                  Allows Alliance Leader OR Officers to level up the alliance, increasing the member
-                  cap by 5, and the tycoon income generation of each member by X%
-                </td>
-              </tr>
-              <tr>
-                <th scope="col">AllianceMembers</th>
-                <td>AMembers</td>
-                <td>Alliances</td>
-                <td>Lists all members of your alliance</td>
-              </tr>
-              <tr>
-                <th scope="col">AlliancePromote</th>
-                <td>APromote</td>
-                <td>Alliances</td>
-                <td>
-                  Allows Alliance Leader OR Officer to Promote Members (Member {">"} Deputy
-                  {">"} Officer {">"} Leader)
-                </td>
-              </tr>
-              <tr>
-                <th scope="col">AllianceRename</th>
-                <td>ARename</td>
-                <td>Alliances</td>
-                <td>Allows alliance leaders to rename their alliance</td>
-              </tr>
-              <tr>
-                <th scope="col">Collect</th>
+                <th scope="col">Delete</th>
                 <td>None</td>
-                <td>Economy</td>
-                <td>Allows Users to collect income from their Tycoons (30-minute cooldown)</td>
+                <td>Information</td>
+                <td>Allows you to delete all of your information from the bot and cause you to start over.</td>
               </tr>
               <tr>
-                <th scope="col">Cooldown</th>
-                <td>CD, CDs, & Cooldowns</td>
-                <td>General</td>
-                <td>Shows all currently running cooldowns on user who ran command</td>
+                <th scope="col">Documentation</th>
+                <td>website, docs</td>
+                <td>Information</td>
+                <td>Links you to the bot's github documentation.</td>
               </tr>
               <tr>
-                <th scope="col">Daily</th>
+                <th scope="col">Dog</th>
                 <td>None</td>
-                <td>Economy</td>
-                <td>Lets user collect their daily reward base on Tycoon Level</td>
+                <td>Pet</td>
+                <td>See your currently adopted dog and it's current needs.</td>
               </tr>
               <tr>
-                <th scope="col">Disable</th>
+                <th scope="col">Drink</th>
                 <td>None</td>
-                <td>General</td>
-                <td>
-                  Allows users to force TycoonMogul to stop collecting/generating data on them, also
-                  wipes all currently stored user data.
-                </td>
+                <td>Dog</td>
+                <td>Command your dog to drink so they can regain thirst.</td>
               </tr>
               <tr>
-                <th scope="col">Enable</th>
+                <th scope="col">Eat</th>
                 <td>None</td>
-                <td>General</td>
-                <td>Allows users to re-enable data collection/generation by TycoonMogul</td>
+                <td>Dog</td>
+                <td>Command your dog to eat so they can regain hunger.</td>
               </tr>
               <tr>
-                <th scope="col">Flip</th>
-                <td>None</td>
-                <td>Economy</td>
-                <td>Allows user to bet on coin flip in order to try to earn money</td>
+                <th scope="col">Guess</th>
+                <td>g</td>
+                <td>Game</td>
+                <td>The bot will send an image of a dog, then you need to respond in the same channel with the breed of dog that is displayed.</td>
               </tr>
               <tr>
-                <th scope="col">Help</th>
-                <td>CMDs & Commands</td>
-                <td>General</td>
-                <td>Shows all commands descriptions of what they do</td>
+                <th scope="col">Inventory</th>
+                <td>inv, i</td>
+                <td>Statistics</td>
+                <td>See what items you have already purchased from the shop.</td>
               </tr>
               <tr>
-                <th scope="col">Invite</th>
-                <td>None</td>
-                <td>General</td>
-                <td>Provides link to invite TM to users’ server</td>
-              </tr>
-              <tr>
-                <th scope="col">Leaderboard</th>
-                <td>LB</td>
-                <td>General</td>
-                <td>Allows users to display different leaderboards.</td>
+                <th scope="col">Nickname</th>
+                <td>nn</td>
+                <td>Pet</td>
+                <td>Change the nickname of your currently adopted dog.</td>
               </tr>
               <tr>
                 <th scope="col">Pay</th>
-                <td>Give</td>
-                <td>Economy</td>
-                <td>Allows one user to send money to another</td>
+                <td>give</td>
+                <td>Statistics</td>
+                <td>Want to give a friend some cash? You can do that!</td>
               </tr>
               <tr>
-                <th scope="col">Ping</th>
-                <td>MS</td>
-                <td>General</td>
-                <td>Displays latencies</td>
+                <th scope="col">Prefix</th>
+                <td>setprefix</td>
+                <td>Information</td>
+                <td>Allows server admins to change the prefix of the server.</td>
               </tr>
               <tr>
                 <th scope="col">Profile</th>
-                <td>UserInfo</td>
-                <td>General</td>
-                <td>Displays users TM profile</td>
+                <td>p</td>
+                <td>Statistics</td>
+                <td>Check your statistics! How many have you gotten correct or incorrect? Also displays the percentage of times you've been right.</td>
               </tr>
               <tr>
-                <th scope="col">RequestDelete</th>
-                <td>rd</td>
-                <td>General</td>
-                <td>Allows users to request deletion of all of their TycoonMogul data</td>
-              </tr>
-              <tr>
-                <th scope="col">SetPrefix</th>
+                <th scope="col">Shop</th>
                 <td>None</td>
-                <td>General</td>
-                <td>Allows server administrators to set prefix for TM</td>
+                <td>Events</td>
+                <td>Purchase items to take care of your dog.</td>
+              </tr>
+              <tr>
+                <th scope="col">Sleep</th>
+                <td>None</td>
+                <td>Dog</td>
+                <td>Command your dog to sleep to regain energy.</td>
               </tr>
               <tr>
                 <th scope="col">Stats</th>
-                <td>botstatus, bstatus, status, & about</td>
-                <td>General</td>
-                <td>Shows status of TycoonMogul</td>
-              </tr>
-              <tr>
-                <th scope="col">Support</th>
                 <td>None</td>
-                <td>General</td>
-                <td>Displays where to get support for TM</td>
+                <td>Information</td>
+                <td>Shows the stats of the bot.</td>
               </tr>
               <tr>
-                <th scope="col">Toggle</th>
+                <th scope="col">Train</th>
                 <td>None</td>
-                <td>General</td>
-                <td>Allows server administrators to toggle level up messages in their server</td>
+                <td>Dog</td>
+                <td>Train your dog to listen to your commands.</td>
               </tr>
               <tr>
-                <th scope="col">Tycoon</th>
+                <th scope="col">Vet</th>
                 <td>None</td>
-                <td>Tycoons</td>
-                <td>Shows info about user’s Tycoon</td>
-              </tr>
-              <tr>
-                <th scope="col">TycoonCreate</th>
-                <td>TCreate</td>
-                <td>Tycoons</td>
-                <td>Takes user through steps to creating Tycoon</td>
-              </tr>
-              <tr>
-                <th scope="col">TycoonDelete</th>
-                <td>TDelete</td>
-                <td>Tycoons</td>
-                <td>Takes user through steps to deleting Tycoon</td>
-              </tr>
-              <tr>
-                <th scope="col">TycoonLevelUp</th>
-                <td>TLevelUp & TLevel</td>
-                <td>Tycoons</td>
-                <td>Takes user through steps to improving Tycoon</td>
-              </tr>
-              <tr>
-                <th scope="col">TycoonRename</th>
-                <td>TRename</td>
-                <td>Tycoons</td>
-                <td>Takes user through steps to renaming Tycoon</td>
-              </tr>
-              <tr>
-                <th scope="col">TycoonType</th>
-                <td>TType</td>
-                <td>Tycoons</td>
-                <td>Takes user through steps to choosing Tycoon Type</td>
-              </tr>
-              <tr>
-                <th scope="col">Vote</th>
-                <td>None</td>
-                <td>General</td>
-                <td>Gives the link to vote for TM</td>
+                <td>Events</td>
+                <td>Take your dog to the vet to regain their hunger, thirst, and energy if they will not listen to your commands.</td>
               </tr>
             </tbody>
           </table>
