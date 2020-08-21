@@ -22,7 +22,7 @@ export default function BalanceLB() {
                   <td>
                     <div className="row">
                       <div className="col-lg-4 col-sm-2"></div>
-                      <div className="col-lg-2 zoom">
+                      <div className="col-lg-1 zoom">
                         <img
                           className="rounded-circle"
                           alt={`${row.username}'s avatar`}
@@ -32,10 +32,9 @@ export default function BalanceLB() {
                         />
                       </div>
                       <div className="col-lg-3">
-                        {" "}
                         <a href={`/user/${row.id}`}>{row.username}</a>
                       </div>
-                      <div className="col-lg-3 col-sm-2"></div>
+                      <div className="col-lg-4 col-sm-2"></div>
                     </div>
                   </td>
                   <td>${row.balance.toLocaleString()}</td>

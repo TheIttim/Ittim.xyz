@@ -95,51 +95,51 @@ const Alliance = (props) => {
         <div className="container text-center">
           <h1 className="title" style={{ marginTop: "2%" }}>
             Alliance Viewer
-            <div className="jumbotron">
-              <div className="row">
-                <div className="col-lg col-sm-12">
-                  <h4>
-                    <b>Alliance Name:</b>
-                  </h4>
-                  <h4>{data.name}</h4>
-                </div>
-                <div className="col-lg col-sm-12">
-                  <h4>
-                    <b>Alliance Description:</b>
-                  </h4>
-                  <h4>{data.description ? data.description : "Not Set"}</h4>
-                </div>
-                <div className="col-lg col-sm-12">
-                  <h4>
-                    <b>Leader:</b>
-                  </h4>
-                  <h4>
-                    {data.leader.username}#{data.leader.discriminator}
-                  </h4>
-                </div>
-                <div className="col-lg col-sm-12">
-                  <h4>
-                    <b>Created:</b>
-                  </h4>
-                  <h4>{formatDate(new Date(data.createdAt))}</h4>
-                </div>
-              </div>
-              <hr />
-              <h2>
-                <b>Alliance Members</b>
-              </h2>
-              <table class="table table-striped table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">Rank</th>
-                    <th scope="col">Username</th>
-                    <th scope="col">Joined On</th>
-                  </tr>
-                </thead>
-                <tbody>{members}</tbody>
-              </table>
-            </div>
           </h1>
+          <div className="jumbotron">
+            <div className="row">
+              <div className="col-lg col-sm-12">
+                <h4>
+                  <b>Alliance Name:</b>
+                </h4>
+                <h4>{data.name}</h4>
+              </div>
+              <div className="col-lg col-sm-12">
+                <h4>
+                  <b>Alliance Description:</b>
+                </h4>
+                <h4>{data.description ? data.description : "Not Set"}</h4>
+              </div>
+              <div className="col-lg col-sm-12">
+                <h4>
+                  <b>Leader:</b>
+                </h4>
+                <h4>
+                  {data.leader.username}#{data.leader.discriminator}
+                </h4>
+              </div>
+              <div className="col-lg col-sm-12">
+                <h4>
+                  <b>Created:</b>
+                </h4>
+                <h4>{formatDate(new Date(data.createdAt))}</h4>
+              </div>
+            </div>
+            <hr />
+            <h2>
+              <b>Alliance Members</b>
+            </h2>
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Rank</th>
+                  <th scope="col">Username</th>
+                  <th scope="col">Joined On</th>
+                </tr>
+              </thead>
+              <tbody>{members}</tbody>
+            </table>
+          </div>
         </div>
       );
     } else if (data && data.error) {
@@ -147,11 +147,11 @@ const Alliance = (props) => {
         <div className="container text-center">
           <h1 className="title" style={{ marginTop: "2%" }}>
             Alliance Viewer
-            <div style={{ marginTop: "20vh" }}>
-              <h3>(╯°□°)╯︵ ┻━┻</h3>
-              <h3>{data.error}</h3>
-            </div>
           </h1>
+          <div style={{ marginTop: "20vh" }}>
+            <h3>(╯°□°)╯︵ ┻━┻</h3>
+            <h3>{data.error}</h3>
+          </div>
         </div>
       );
     }

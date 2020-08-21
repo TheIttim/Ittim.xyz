@@ -49,71 +49,59 @@ const Profile = (props) => {
   );
   if (id) {
     if (data && !data.error) {
-      // const members = [];
-      // for (const obj of data.members) {
-      //   let rank;
-      //   switch (obj.rank) {
-      //     case 3:
-      //       rank = "Leader";
-      //       break;
-      //     case 2:
-      //       rank = "Officer";
-      //       break;
-      //     case 1:
-      //       rank = "Deputy";
-      //       break;
-      //     case 0:
-      //       rank = "Member";
-      //       break;
-      //   }
-      //   members.push(
-      //     <tr>
-      //       <th>{rank}</th>
-      //       <td>
-      //         <div className="row">
-      //           <div className="col-3"></div>
-      //           <div className="col-lg col-sm-12">
-      //             <img
-      //               className="rounded-circle zoom"
-      //               alt={`${obj.username}'s avatar`}
-      //               src={obj.avatarURL}
-      //               width={64}
-      //               height={64}
-      //             />
-      //           </div>
-      //           <div className="col-lg col-sm-12">
-      //             {obj.username}#{obj.discriminator}
-      //           </div>
-      //           <div className="col-3"></div>
-      //         </div>
-      //       </td>
-      //       {/* <td>{formatDate(new Date(obj.joinedAt))}</td> */}
-      //     </tr>
-      //   );
-      // }
       content = (
-        <div className="container text-center">
-          <h1 className="title" style={{ marginTop: "2%" }}>
-            Profile Viewer
-            <div className="jumbotron">
-              <div className="row">
-                <div className="col-lg-6 col-sm-12">
-                  <h4>
-                    <b>Username</b>
-                  </h4>
-                  <h4>
-                    {data.username}#{data.discriminator}
-                  </h4>
-                </div>
-                <div className="col-lg-6 col-sm-12">
-                  <h4>
-                    <b>User Level</b>
-                  </h4>
-                  <h4>000000</h4>
-                </div>
+        <div className="container text-center" style={{ marginTop: "2%" }}>
+          <div className="jumbotron">
+            <h1 className="title">Profile Viewer</h1>
+            <div className="row">
+              <div className="col-lg-5 col-sm-2"></div>
+              <div className="col-lg-1 zoom">
+                <img
+                  className="rounded-circle"
+                  alt={`${data.username}'s avatar`}
+                  src={data.avatarURL}
+                  width={64}
+                  height={64}
+                />
+              </div>
+              <div className="col-lg-3 col-sm-12">
+                <span className="uas">
+                  {data.username}#{data.discriminator}
+                </span>
+              </div>
+              <div className="col-lg col-sm-2"></div>
+            </div>
+            <div className="row">
+              <div className="col-lg col-sm-12">
+                <ul>
+                  <h3>User Information</h3>
+                  <li className="uli">
+                    <strong>Tycoon Name:</strong> {data.tycoon ? data.tycoon.name : "None"}
+                  </li>
+                  <li className="uli">
+                    <strong>Alliance Name:</strong> {data.alliance ? data.alliance.name : "None"}
+                  </li>
+                </ul>
+              </div>
+              <div className="col-lg col-sm-12">
+                <ul>
+                  <h3>Position in Leaderboards</h3>
+                  <li className="uli">
+                    <strong>User Level:</strong> #8/100
+                  </li>
+                  <li className="uli">
+                    <strong>Balance:</strong> #53/100
+                  </li>
+                  <li className="uli">
+                    <strong>Tycoon Level</strong>: #92/100
+                  </li>
+                  <li className="uli">
+                    <strong>Alliance Members:</strong> #13/20
+                  </li>
+                </ul>
               </div>
             </div>
-          </h1>
+          </div>
         </div>
       );
     } else if (data && data.error) {

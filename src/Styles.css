@@ -443,3 +443,14 @@ footer .copy {
   line-height: 1.8;
   margin: 0 0 1.4rem 0;
 }
+
+.jumbotron {
+  padding: 2rem 1rem !important;
+}
+
+@media (min-width: 992px) {
+  .uas {
+    float: left;
+    margin-top: 5%;
+  }
+}
