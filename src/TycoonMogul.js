@@ -81,6 +81,7 @@ export default class TycoonMogul extends React.Component {
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
+            title="demo"
           ></iframe>
           <hr />
 

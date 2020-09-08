@@ -1,9 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react-router-dom";
 import Contact from "./Contact";
 import Home from "./Home";
 import ProfilePicture from "./pfp.png";
 import Status from "./Status/Status";
+import DevDash from "./DevDash";
 import TycoonMogul from "./TycoonMogul";
 import { ThemeChooser } from "@puyodead1/react-bootstrap-theme-switcher/lib/ThemeChooser";
 import "./Styles.css";
@@ -14,6 +15,14 @@ import PrivacyPolicy from "./PrivacyPolicy";
 import Doghouse from "./Doghouse";
 import Profile from "./Profile";
 import UserSearch from "./User";
+import LoginCallback from "./LoginCallback";
+import config from "./config";
+
+import "primereact/resources/themes/bootstrap4-dark-blue/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+
+const { owners, client_id, redirect_uri } = config;
 
 const PageNotFound = () => {
   return (
@@ -23,6 +32,27 @@ const PageNotFound = () => {
     </div>
   );
 };
+
+const isAuthenticated = () => {
+  const token = window.localStorage.getItem("token");
+  const userD = window.localStorage.getItem("user");
+
+  if (token && userD) {
+    const user = JSON.parse(userD);
+    if (owners.includes(user.id)) {
+      return true;
+    } else return false;
+  }
+};
+
+const PrivateRoute = ({ component: Component, ...rest }) => (
+  <Route
+    {...rest}
+    render={(props) =>
+      isAuthenticated() === true ? <Component {...props} /> : <Redirect to="/login" />
+    }
+  />
+);
 
 export default class App extends React.Component {
   render() {
@@ -152,6 +182,25 @@ export default class App extends React.Component {
           <Route path="/doghouse" exact>
             <Doghouse />
           </Route>
+          <PrivateRoute path="/devdash" component={DevDash} exact />
+          <Route
+            name="login"
+            path="/login"
+            component={() => {
+              window.location = `https://discord.com/api/oauth2/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=code&scope=identify`;
+              return null;
+            }}
+          />
+          <Route
+            name="logout"
+            path="/logout"
+            component={() => {
+              window.localStorage.removeItem("user");
+              window.localStorage.removeItem("token");
+              return <h1 className="text-center">Successfully logged out!</h1>;
+            }}
+          />
+          <Route name="oauth_callback" path="/oauth/callback" component={LoginCallback} />
           <Route name="allianceviewer" path="/alliances/*" component={Alliance} />
           <Route name="usersearch" path="/user" exact={true} component={UserSearch} />
           <Route name="profileviewer" path="/user/*" component={Profile} />

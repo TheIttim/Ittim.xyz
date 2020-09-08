@@ -65,6 +65,9 @@ const Alliance = (props) => {
           case 0:
             rank = "Member";
             break;
+          default:
+            rank = "Member";
+            break;
         }
         members.push(
           <tr>

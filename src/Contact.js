@@ -8,7 +8,7 @@ export default class contact extends React.Component {
         <MetaTags>
           <title>Mogul Development | Contact</title>
           <link rel="canonical" href="https://www.moguldevs.xyz/contact" />
-          <meta property="og:title" content="Ittim | Contact" />
+          <meta property="og:title" content="Mogul Development | Contact" />
           <meta property="og:url" content="https://moguldevs.xyz/contact" />
           <meta property="og:image" content="https://moguldevs.xyz/Profile_Picture.png" />
           <meta
@@ -24,15 +24,11 @@ export default class contact extends React.Component {
             <h4>A small team that creates big products!</h4>
             <p>
               Our flagship is{" "}
-              <a
-                href="https://moguldevs.xyz/tycoonmogul"
-                target="_blank"
-                whateeverthatnoreferthingwas
-              >
+              <a href="https://moguldevs.xyz/tycoonmogul" target="_blank" rel="noopener noreferrer">
                 TycoonMogul
               </a>
               , a{" "}
-              <a href="https://discord.com" target="_blank" whateeverthatnoreferthingwas>
+              <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
                 Discord
               </a>{" "}
               bot bringing entertainment to hundreds of servers via an idle tycoon type gaming
@@ -59,14 +55,14 @@ export default class contact extends React.Component {
                 <li>
                   <b>XiuhcoatlSlayer</b>, who is in charge of the team that moderates our public
                   spaces, like our{" "}
-                  <a href="https://discord.gg/Ef2AQns" target="_blank" whateeverthatnoreferthingwas>
+                  <a href="https://discord.gg/Ef2AQns" target="_blank" rel="noopener noreferrer">
                     Discord Server
                   </a>
                   , she is also the developer of{" "}
                   <a
                     href="https://moguldevs.xyz/doghouse"
                     target="_blank"
-                    whateeverthatnoreferthingwas
+                    rel="noopener noreferrer"
                   >
                     Doghouse
                   </a>
