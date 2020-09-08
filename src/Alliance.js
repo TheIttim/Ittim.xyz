@@ -36,7 +36,7 @@ const Alliance = (props) => {
   }
 
   const id = props.match.params[0] || null;
-  const data = usePromise(`${config.apiURL}${config.endpoints.alliance}/${id}`);
+  const data = usePromise(`${config.API_URL}${config.ENDPOINTS.ALLIANCE}/${id}`);
   let content = (
     <div className="container text-center">
       <h1 className="title" style={{ marginTop: "2%" }}>

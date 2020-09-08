@@ -454,3 +454,20 @@ footer .copy {
     margin-top: 5%;
   }
 }
+
+.nav-item {
+  /* border: solid 1px black; */
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.nav-item:hover {
+  background-color: #3f6791;
+}
+
+.navbar {
+  padding: 0 1rem !important;
+}
+
+.dropdown-toggle::after {
+  margin-top: 0.5rem !important;
+}

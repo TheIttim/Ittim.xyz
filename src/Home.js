@@ -1,7 +1,30 @@
 import React from "react";
 import MetaTags from "react-meta-tags";
+import { Toast } from "primereact/toast";
 
 export default class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    if (window.location.search === "?action=loggedout") this.showLoggedOut = true;
+    if (window.location.search === "?action=loggedin") this.showLoggedIn = true;
+  }
+
+  componentDidMount() {
+    if (this.showLoggedOut) {
+      this.toast.show({
+        severity: "success",
+        summary: "Success",
+        detail: "Logged Out",
+      });
+    } else if (this.showLoggedIn) {
+      this.toast.show({
+        severity: "success",
+        summary: "Success",
+        detail: "Logged In",
+      });
+    }
+  }
+
   render() {
     return (
       <div className="app">
@@ -16,6 +39,10 @@ export default class Home extends React.Component {
             content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
           />
         </MetaTags>
+        {this.showLoggedOut || this.showLoggedIn ? (
+          <Toast ref={(el) => (this.toast = el)}></Toast>
+        ) : null}
+
         <div className="container text-center">
           <h3 style={{ marginTop: "2%" }}>We are Mogul Development</h3>
           <br />
@@ -23,10 +50,11 @@ export default class Home extends React.Component {
             <b>About Us</b>
           </h4>
           <p>
-            Mogul Development is the team responsible for the Tycoon Mogul family of software as well as Doghouse. Learn more about us on the About & Contact page, or join our Discord server to hang out with us and be among the first to try out our newest creations!
+            Mogul Development is the team responsible for the Tycoon Mogul family of software as
+            well as Doghouse. Learn more about us on the About & Contact page, or join our Discord
+            server to hang out with us and be among the first to try out our newest creations!
           </p>
           <br />
-
         </div>
       </div>
     );

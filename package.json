@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
     "@klasa/duration": "0.0.3",
     "@puyodead1/react-bootstrap-theme-switcher": "^1.0.11",
     "@testing-library/jest-dom": "^4.2.4",
@@ -24,7 +26,8 @@
     "react-meta-tags": "^0.7.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "react-timer-mixin": "^0.13.4"
+    "react-timer-mixin": "^0.13.4",
+    "react-transition-group": "^4.4.1"
   },
   "scripts": {
     "start": "react-scripts start",

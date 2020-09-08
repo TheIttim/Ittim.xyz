@@ -8,7 +8,7 @@ export default function BalanceLB() {
     useEffect(() => {
       let isMounted = true;
 
-      fetch(`${config.apiURL}${config.endpoints.leaderboards}/balance`)
+      fetch(`${config.API_URL}${config.ENDPOINTS.LEADERBOARDS}/balance`)
         .then(async (res) => {
           if (isMounted) {
             const d = await res.json();
