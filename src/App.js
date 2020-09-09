@@ -55,6 +55,10 @@ const Unauthorized = () => {
   );
 };
 
+const isLoggedIn = () => {
+  return window.localStorage.getItem("user");
+};
+
 const isAuthenticated = () => {
   const user = GetUser();
 
@@ -67,7 +71,15 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={(props) =>
-      isAuthenticated() === true ? <Component {...props} /> : <Redirect to="/403" />
+      isLoggedIn() ? (
+        isAuthenticated() === true ? (
+          <Component {...props} />
+        ) : (
+          <Redirect to="/?action=forbidden" />
+        )
+      ) : (
+        <Redirect to="/?action=unauthenticated" />
+      )
     }
   />
 );
@@ -95,7 +107,7 @@ const GetUserAvatarURL = () => {
 
 const AuthenticatedUser = () => {
   return (
-    <li className="nav-item dropdown dropdown1">
+    <li className="nav-item dropdown dropdown1" style={{ paddingLeft: "1rem" }}>
       <div
         className="row dropdown-toggle"
         id="navbarDropdown"
@@ -110,7 +122,7 @@ const AuthenticatedUser = () => {
           marginBottom: "0",
         }}
       >
-        <div className="col-5">
+        <div className="col" style={{ marginRight: "1rem" }}>
           {/* image */}
           <img
             alt="user avatar"
@@ -120,11 +132,18 @@ const AuthenticatedUser = () => {
             height="30"
           />
         </div>
-        <div className="col">{GetUser().username}</div>
+        <div className="col" style={{ minWidth: "auto" }}>
+          {GetUser().username}
+        </div>
       </div>
       <div className="dropdown-menu dropdown-menu1" aria-labelledby="navbarDropdown">
-        <NavLink to="/devdash" className="dropdown-item" activeClassName="active">
-          Dev Dash
+        {isAuthenticated() ? (
+          <NavLink to="/devdash" className="dropdown-item" activeClassName="active">
+            Dev Dash
+          </NavLink>
+        ) : null}
+        <NavLink to={`/user/${GetUser().id}`} className="dropdown-item" activeClassName="active">
+          Profile
         </NavLink>
         <NavLink to="/logout" className="dropdown-item" activeClassName="active">
           Logout
@@ -243,7 +262,7 @@ const App = () => {
 
           <ul className="navbar-nav ml-auto themetoggle">
             {window.location.pathname !== "/login/callback" ? (
-              isAuthenticated() ? (
+              isLoggedIn() ? (
                 AuthenticatedUser()
               ) : (
                 <li className="nav-item">
@@ -311,8 +330,8 @@ const App = () => {
         <Route name="allianceviewer" path="/alliances/*" component={Alliance} />
         <Route name="usersearch" path="/user" exact={true} component={UserSearch} />
         <Route name="profileviewer" path="/user/*" component={Profile} />
-        <Route name="forbidden" path="/403" component={Forbidden} exact></Route>
-        <Route name="unauthorized" path="/401" component={Unauthorized} exact></Route>
+        {/* <Route name="forbidden" path="/403" component={Forbidden} exact></Route>
+        <Route name="unauthorized" path="/401" component={Unauthorized} exact></Route> */}
         <Route component={PageNotFound}></Route>
       </Switch>
     </Router>

@@ -7,6 +7,8 @@ export default class Home extends React.Component {
     super(props);
     if (window.location.search === "?action=loggedout") this.showLoggedOut = true;
     if (window.location.search === "?action=loggedin") this.showLoggedIn = true;
+    if (window.location.search === "?action=forbidden") this.showForbidden = true;
+    if (window.location.search === "?action=unauthenticated") this.showUnAuth = true;
   }
 
   componentDidMount() {
@@ -15,12 +17,28 @@ export default class Home extends React.Component {
         severity: "success",
         summary: "Success",
         detail: "Logged Out",
+        life: 10000,
       });
     } else if (this.showLoggedIn) {
       this.toast.show({
         severity: "success",
         summary: "Success",
         detail: "Logged In",
+        life: 10000,
+      });
+    } else if (this.showForbidden) {
+      this.toast.show({
+        severity: "error",
+        summary: "Forbidden",
+        detail: "You are not authorized to view that page!",
+        life: 10000,
+      });
+    } else if (this.showUnAuth) {
+      this.toast.show({
+        severity: "error",
+        summary: "Authentication Required",
+        detail: "Authentication is required to view that page!",
+        life: 10000,
       });
     }
   }
@@ -39,9 +57,7 @@ export default class Home extends React.Component {
             content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
           />
         </MetaTags>
-        {this.showLoggedOut || this.showLoggedIn ? (
-          <Toast ref={(el) => (this.toast = el)}></Toast>
-        ) : null}
+        <Toast ref={(el) => (this.toast = el)}></Toast>
 
         <div className="container text-center">
           <h3 style={{ marginTop: "2%" }}>We are Mogul Development</h3>

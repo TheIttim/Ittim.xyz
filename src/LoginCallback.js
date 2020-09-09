@@ -16,24 +16,52 @@ const LoginCallback = ({ location }) => {
     fetch(`${API_URL}/api/oauth/code?${qParams}`)
       .then((res) => res.json())
       .then(async (res) => {
-        if (res.error) {
-          // error
-          setError(JSON.parse(res.error));
-        } else if (res.access_token) {
-          window.localStorage.setItem("token", res.access_token);
+        console.debug(res);
+        if (typeof res === "object") {
+          // success
           await fetch("https://discord.com/api/users/@me", {
             method: "GET",
             headers: {
               Authorization: `Bearer ${res.access_token}`,
             },
           })
-            .then((res) => res.json())
-            .then((res) => {
-              window.localStorage.setItem("user", JSON.stringify(res));
+            .then((res2) => res2.json())
+            .then((user) => {
+              console.debug(user);
+              window.localStorage.setItem("token", res.access_token);
+              window.localStorage.setItem("user", JSON.stringify(user));
+              setLoggedIn(true);
             })
-            .catch((e) => setError({ error: e }));
-          setLoggedIn(true);
+            .catch((e) => setError({ error: e.message }));
+        } else if (typeof res === "string") {
+          // fail
+          const parsed = JSON.parse(res);
+          console.error(parsed);
+          setError(parsed);
+          setLoggedIn(false);
         }
+        // console.debug(typeof res);
+        // res = JSON.parse(res);
+        // if (res.error) {
+        //   // error
+        //   setError(res);
+        //   setLoggedIn(false);
+        // } else if (res.access_token) {
+        //   window.localStorage.setItem("token", res.access_token);
+
+        //   await fetch("https://discord.com/api/users/@me", {
+        //     method: "GET",
+        //     headers: {
+        //       Authorization: `Bearer ${res.access_token}`,
+        //     },
+        //   })
+        //     .then((res) => res.json())
+        //     .then((user) => {
+        //       window.localStorage.setItem("user", user);
+        //       setLoggedIn(true);
+        //     })
+        //     .catch((e) => setError({ error: e.message }));
+        // }
       })
       .catch((e) => setError({ error: e.message, error_description: "Error occured!" }));
   }, []);
@@ -46,8 +74,7 @@ const LoginCallback = ({ location }) => {
       </section>
     );
     window.location.assign("/?action=loggedin");
-  }
-  if (error) {
+  } else if (error) {
     content = (
       <section>
         <h1>{error.error}</h1>

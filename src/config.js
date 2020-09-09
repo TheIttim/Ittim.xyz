@@ -10,7 +10,8 @@ export default {
   },
   OWNERS: ["183790855813988353", "213247101314924545", "311553339261321216"],
   OAUTH: {
-    REDIRECT_URI: "https://moguldevs.xyz/login/callback",
+    // REDIRECT_URI: "https://moguldevs.xyz/login/callback",
+    REDIRECT_URI: "http://127.0.0.1:3000/login/callback",
     SCOPE: "identify",
     CLIENT_ID: "519954424270028811",
   },

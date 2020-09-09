@@ -4,6 +4,7 @@ import AllianceMemberLB from "./Leaderboards/AllianceMembers.js";
 import BalanceLB from "./Leaderboards/Balance";
 import TycoonLevelLB from "./Leaderboards/TycoonLevel.js";
 import UserLevelLB from "./Leaderboards/UserLevel.js";
+import { Messages } from "primereact/messages";
 
 export default class Leaderboard extends React.Component {
   constructor(props) {
@@ -17,6 +18,16 @@ export default class Leaderboard extends React.Component {
     const type = e.target.dataset.type;
     this.setState({ type });
   };
+
+  componentDidMount() {
+    this.messages.show({
+      severity: "warn",
+      summary: "Some avatars may be broken, this is a known issue related to changing avatars.",
+      closable: false,
+      sticky: true,
+      life: null,
+    });
+  }
 
   render() {
     let a;
@@ -94,6 +105,8 @@ export default class Leaderboard extends React.Component {
             </div>
             <div className="col-3"></div>
           </div>
+
+          <Messages ref={(el) => (this.messages = el)}></Messages>
           {a}
         </div>
       </div>
