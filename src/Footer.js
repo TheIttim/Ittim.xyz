@@ -54,6 +54,10 @@ export default class Footer extends React.Component {
     }, 4000);
   }
 
+  askew() {
+    document.getElementsByTagName("body")[0].classList.add("askew");
+  }
+
   render() {
     return (
       <div id="footer" class="mt-auto">
@@ -91,7 +95,21 @@ export default class Footer extends React.Component {
               </div>
               <div className="col-md-4 col-sm-12">
                 <p>
-                  <i className="text-muted copy">Copyright &copy; 2020 Mogul Development LLC</i>
+                  <i className="text-muted copy">
+                    Copyright{" "}
+                    <button
+                      className="text-muted"
+                      onClick={this.askew}
+                      style={{
+                        background: "transparent",
+                        border: "none",
+                        padding: "0",
+                      }}
+                    >
+                      &copy;
+                    </button>{" "}
+                    2020 Mogul Development LLC
+                  </i>
                 </p>
               </div>
               <div className="col-md col-sm-12">
