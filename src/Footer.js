@@ -117,8 +117,10 @@ export default class Footer extends React.Component {
                   background: "transparent",
                   border: "none",
                   fontSize: "0",
+                  width: "16px",
+                  height: "68px",
                 }}
-              ></button>
+              />
             </div>
           </div>
         </footer>
