@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MetaTags from "react-meta-tags";
 import { Chart } from "primereact/chart";
+import GuildActivity from "./DevDashComponenents/GuildActivity";
 import config from "./config";
 
 function getDates() {
@@ -82,9 +83,9 @@ const DevDash = () => {
     return content;
   }
 
-  const dates = getDates();
+  // const dates = getDates();
 
-  const basicData = {
+  const commandFrequencyData = {
     // labels: dates
     //   .map((x) => x.toDateString().substring(0, x.toDateString().length - 4))
     //   .reverse(),
@@ -103,15 +104,9 @@ const DevDash = () => {
       <MetaTags>
         <title>Mogul Development | Developer Dashboard</title>
         <link rel="canonical" href="https://www.moguldevs.xyz/devdash" />
-        <meta
-          property="og:title"
-          content="Mogul Development | Developer Dashboard"
-        />
+        <meta property="og:title" content="Mogul Development | Developer Dashboard" />
         <meta property="og:url" content="https://moguldevs.xyz/devdash" />
-        <meta
-          property="og:image"
-          content="https://moguldevs.xyz/Profile_Picture.png"
-        />
+        <meta property="og:image" content="https://moguldevs.xyz/Profile_Picture.png" />
         <meta
           property="og:description"
           content="Welcome to moguldevs.xyz, The website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
@@ -121,9 +116,14 @@ const DevDash = () => {
         <div>
           <div className="card">
             <h5>Command Frequency</h5>
-            <Chart type="bar" data={basicData} options={basicOptions} />
+            <Chart type="bar" data={commandFrequencyData} options={basicOptions} />
           </div>
         </div>
+
+        <br />
+        <br />
+
+        <GuildActivity />
       </div>
     </div>
   );
