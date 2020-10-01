@@ -3,6 +3,8 @@ import MetaTags from "react-meta-tags";
 import { Chart } from "primereact/chart";
 import GuildActivity from "./DevDashComponenents/GuildActivity";
 import config from "./config";
+import { Messages } from "primereact/messages";
+import { Message } from "primereact/message";
 
 function getDates() {
   const BUFFER = 7; // amount of days to show, default is 6 (one week)
@@ -19,6 +21,11 @@ function getDates() {
 
 function getLightTheme() {
   let basicOptions = {
+    tooltips: {
+      mode: "index",
+      intersect: false,
+    },
+    responsive: true,
     legend: {
       labels: {
         fontColor: "#FFFFFF",
@@ -27,13 +34,18 @@ function getLightTheme() {
     scales: {
       xAxes: [
         {
+          stacked: true,
           ticks: {
             fontColor: "#FFFFFF",
+          },
+          gridLines: {
+            color: "#ebedef",
           },
         },
       ],
       yAxes: [
         {
+          stacked: true,
           ticks: {
             fontColor: "#FFFFFF",
           },
@@ -65,7 +77,9 @@ const DevDash = () => {
             setState(d);
           }
         })
-        .catch((error) => console.error(error));
+        .catch((err) => {
+          console.error(err);
+        });
 
       return () => {
         isMounted = false;
@@ -77,7 +91,11 @@ const DevDash = () => {
   const data = usePromise();
   const { basicOptions } = getLightTheme();
 
-  let content = <h1>Loading...</h1>;
+  let content = (
+    <div className="text-center">
+      <h1>Loading...</h1>
+    </div>
+  );
 
   if (!data) {
     return content;
@@ -104,9 +122,15 @@ const DevDash = () => {
       <MetaTags>
         <title>Mogul Development | Developer Dashboard</title>
         <link rel="canonical" href="https://www.moguldevs.xyz/devdash" />
-        <meta property="og:title" content="Mogul Development | Developer Dashboard" />
+        <meta
+          property="og:title"
+          content="Mogul Development | Developer Dashboard"
+        />
         <meta property="og:url" content="https://moguldevs.xyz/devdash" />
-        <meta property="og:image" content="https://moguldevs.xyz/Profile_Picture.png" />
+        <meta
+          property="og:image"
+          content="https://moguldevs.xyz/Profile_Picture.png"
+        />
         <meta
           property="og:description"
           content="Welcome to moguldevs.xyz, The website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
@@ -116,7 +140,11 @@ const DevDash = () => {
         <div>
           <div className="card">
             <h5>Command Frequency</h5>
-            <Chart type="bar" data={commandFrequencyData} options={basicOptions} />
+            <Chart
+              type="horizontalBar"
+              data={commandFrequencyData}
+              options={basicOptions}
+            />
           </div>
         </div>
 

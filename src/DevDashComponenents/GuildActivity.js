@@ -2,6 +2,9 @@ import React from "react";
 import { Chart } from "primereact/chart";
 import config from "../config";
 
+import { Messages } from "primereact/messages";
+import { Message } from "primereact/message";
+
 export default class GuildActivity extends React.Component {
   constructor(props) {
     super(props);
@@ -11,6 +14,11 @@ export default class GuildActivity extends React.Component {
     };
 
     this.options = {
+      tooltips: {
+        mode: "index",
+        intersect: false,
+      },
+      responsive: true,
       legend: {
         labels: {
           fontColor: "#FFFFFF",
@@ -19,6 +27,7 @@ export default class GuildActivity extends React.Component {
       scales: {
         xAxes: [
           {
+            stacked: true,
             ticks: {
               fontColor: "#FFFFFF",
             },
@@ -26,6 +35,7 @@ export default class GuildActivity extends React.Component {
         ],
         yAxes: [
           {
+            stacked: true,
             ticks: {
               fontColor: "#FFFFFF",
             },
@@ -44,6 +54,10 @@ export default class GuildActivity extends React.Component {
       },
     })
       .then(async (res) => {
+        if (res.status !== 200) {
+          // failure
+          throw new Error(`${res.status} - ${res.statusText}`);
+        }
         const d = await res.json();
         const metrics = d.metrics;
         const reduced = metrics.reduce((r, a) => {
@@ -66,7 +80,16 @@ export default class GuildActivity extends React.Component {
 
         this.setState({ data: chatData });
       })
-      .catch((error) => console.error(error));
+      .catch((err) => {
+        this.setState({ error: true });
+        console.error(err);
+        this.messages.show({
+          severity: "error",
+          detail: err.message,
+          closable: false,
+          sticky: true,
+        });
+      });
   }
 
   render() {
@@ -76,8 +99,19 @@ export default class GuildActivity extends React.Component {
         <div>
           <div className="card">
             <h5>Guild Activity</h5>
-            <Chart type="bar" data={this.state.data} options={this.options} />
+            <Chart
+              type="horizontalBar"
+              data={this.state.data}
+              options={this.options}
+            />
           </div>
+        </div>
+      );
+    } else if (this.state.error) {
+      //
+      content = (
+        <div>
+          <Messages ref={(el) => (this.messages = el)}></Messages>
         </div>
       );
     }
