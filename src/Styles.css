@@ -479,3 +479,15 @@ footer .copy {
   -o-transform: rotate(1deg);
   transform: rotate(1deg);
 }
+
+.input-wrapper > div:not(:first-child) {
+  margin-top: 15px;
+}
+
+.input-span {
+  width: 50%;
+}
+
+.input-wrapper > div > small {
+  font-style: italic;
+}

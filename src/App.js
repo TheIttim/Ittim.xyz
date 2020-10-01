@@ -6,7 +6,7 @@ import ProfilePicture from "./pfp.png";
 import Status from "./Status/Status";
 import DevDash from "./DevDash";
 import TycoonMogul from "./TycoonMogul";
-
+import DataDeletionForm from "./DataDeletionForm";
 import { ThemeChooser } from "@puyodead1/react-bootstrap-theme-switcher/lib/ThemeChooser";
 import "./Styles.css";
 import Leaderboard from "./Leaderboard";
@@ -22,6 +22,7 @@ import config from "./config";
 import "primereact/resources/themes/bootstrap4-dark-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
+import "primeflex/primeflex.min.css";
 import LoginCallback from "./LoginCallback";
 
 const { OAUTH, API_URL, OWNERS } = config;
@@ -228,6 +229,9 @@ const App = () => {
                 <NavLink to="/leaderboards" className="dropdown-item" activeClassName="active">
                   Leaderboards
                 </NavLink>
+                <NavLink to="/deletion" className="dropdown-item" activeClassName="active">
+                  Request Data Deletion
+                </NavLink>
                 <a
                   href="https://discord.com/oauth2/authorize?client_id=519954424270028811&scope=bot&permissions=380096"
                   className="dropdown-item"
@@ -305,6 +309,9 @@ const App = () => {
         </Route>
         <Route path="/privacy" exact>
           <PrivacyPolicy />
+        </Route>
+        <Route path="/deletion" exact>
+          <DataDeletionForm />
         </Route>
         <Route path="/donors" exact>
           <Donors />
