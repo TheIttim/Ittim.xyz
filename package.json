@@ -17,6 +17,7 @@
     "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
     "jquery": "^3.5.1",
+    "jquery-validation": "^1.19.2",
     "node-fetch": "^2.6.0",
     "primeflex": "^2.0.0",
     "primeicons": "^4.0.0",

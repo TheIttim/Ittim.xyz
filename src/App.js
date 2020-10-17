@@ -19,7 +19,7 @@ import UserSearch from "./User";
 import config from "./config";
 
 // styling for devdash
-import "primereact/resources/themes/bootstrap4-dark-blue/theme.css";
+import "./theme/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.min.css";
@@ -163,7 +163,7 @@ const App = () => {
       `prompt=none`,
     ].join("&");
     try {
-      const res = await fetch(`${API_URL}/api/oauth/url?${qParams}`);
+      const res = await fetch(`${API_URL}/oauth/url?${qParams}`);
       const url = await res.json();
       window.location.assign(url.url);
     } catch (e) {
@@ -229,9 +229,9 @@ const App = () => {
                 <NavLink to="/leaderboards" className="dropdown-item" activeClassName="active">
                   Leaderboards
                 </NavLink>
-                <NavLink to="/deletion" className="dropdown-item" activeClassName="active">
+                {/* <NavLink to="/deletion" className="dropdown-item" activeClassName="active">
                   Request Data Deletion
-                </NavLink>
+                </NavLink> */}
                 <a
                   href="https://discord.com/oauth2/authorize?client_id=519954424270028811&scope=bot&permissions=380096"
                   className="dropdown-item"

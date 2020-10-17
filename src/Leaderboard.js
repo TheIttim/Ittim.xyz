@@ -5,6 +5,8 @@ import BalanceLB from "./Leaderboards/Balance";
 import TycoonLevelLB from "./Leaderboards/TycoonLevel.js";
 import UserLevelLB from "./Leaderboards/UserLevel.js";
 import { Messages } from "primereact/messages";
+import PrimeReact from "primereact/utils";
+import { Ripple } from "primereact/ripple";
 
 export default class Leaderboard extends React.Component {
   constructor(props) {
@@ -12,6 +14,8 @@ export default class Leaderboard extends React.Component {
     this.state = { type: "balance" };
 
     this.onClick = this.onClick.bind(this);
+
+    PrimeReact.ripple = true;
   }
 
   onClick = (e) => {
@@ -60,46 +64,50 @@ export default class Leaderboard extends React.Component {
             <div className="leaderboard-nav col row">
               <div className="leaderboard-section col">
                 <button
-                  className={`leaderboard-link btn btn-first ${
+                  className={`leaderboard-link btn btn-first p-ripple ${
                     this.state.type === "balance" ? "leaderboardnav-active" : ""
                   }`}
                   data-type="balance"
                   onClick={this.onClick}
                 >
                   Balance
+                  <Ripple />
                 </button>
               </div>
               <div className="leaderboard-section col" style={{ color: "#ffffff" }}>
                 <button
-                  className={`leaderboard-link btn ${
+                  className={`leaderboard-link btn p-ripple ${
                     this.state.type === "userlevel" ? "leaderboardnav-active" : ""
                   }`}
                   data-type="userlevel"
                   onClick={this.onClick}
                 >
                   User Level
+                  <Ripple />
                 </button>
               </div>
               <div className="leaderboard-section col">
                 <button
-                  className={`leaderboard-link btn ${
+                  className={`leaderboard-link btn p-ripple ${
                     this.state.type === "tycoonlevel" ? "leaderboardnav-active" : ""
                   }`}
                   data-type="tycoonlevel"
                   onClick={this.onClick}
                 >
                   Tycoon Level
+                  <Ripple />
                 </button>
               </div>
               <div className="leaderboard-section col">
                 <button
-                  className={`leaderboard-link btn btn-last ${
+                  className={`leaderboard-link btn btn-last p-ripple ${
                     this.state.type === "alliancemembers" ? "leaderboardnav-active" : ""
                   }`}
                   data-type="alliancemembers"
                   onClick={this.onClick}
                 >
                   Alliance Members
+                  <Ripple />
                 </button>
               </div>
             </div>

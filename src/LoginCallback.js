@@ -13,7 +13,7 @@ const LoginCallback = ({ location }) => {
       `redirect_uri=${OAUTH.REDIRECT_URI}`,
       `scope=${OAUTH.SCOPE}`,
     ].join("&");
-    fetch(`${API_URL}/api/oauth/code?${qParams}`)
+    fetch(`${API_URL}/oauth/code?${qParams}`)
       .then((res) => res.json())
       .then(async (res) => {
         console.debug(res);

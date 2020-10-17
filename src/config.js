@@ -1,10 +1,10 @@
 export default {
   //API_URL: "http://127.0.0.1",
-  API_URL: "https://api.moguldevs.xyz",
+  API_URL: "https://api.moguldevs.xyz/api",
   //bot_url: "http://127.0.0.1",
   ENDPOINTS: {
     STATS: "/stats",
-    LEADERBOARDS: "/leaderboards",
+    LEADERBOARDS: "/leaderboard",
     ALLIANCE: "/alliance",
     USER: "/user",
   },

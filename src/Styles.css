@@ -491,3 +491,7 @@ footer .copy {
 .input-wrapper > div > small {
   font-style: italic;
 }
+
+form {
+  text-align: center;
+}
