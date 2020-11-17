@@ -31,7 +31,7 @@ export default class PrivacyPolicy extends React.Component {
             title="Privacy Policy"
             width="100%"
             height={500}
-            style={{ border: "none", color: "white" }}
+            style={{ border: "none", backgroundColor: "white" }}
           />
         </div>
       </div>
