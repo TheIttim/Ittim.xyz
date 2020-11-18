@@ -1,5 +1,11 @@
 import React, { useCallback } from "react";
-import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+  Redirect,
+} from "react-router-dom";
 import Contact from "./Contact";
 import Home from "./Home";
 import ProfilePicture from "./pfp.png";
@@ -12,7 +18,6 @@ import "./Styles.css";
 import Leaderboard from "./Leaderboard";
 import Alliance from "./Alliance";
 import Donors from "./Donors";
-import PrivacyPolicy from "./PrivacyPolicy";
 import Doghouse from "./Doghouse";
 import Profile from "./Profile";
 import UserSearch from "./User";
@@ -24,6 +29,7 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.min.css";
 import LoginCallback from "./LoginCallback";
+import Policies from "./Policies";
 
 const { OAUTH, API_URL, OWNERS } = config;
 
@@ -137,16 +143,31 @@ const AuthenticatedUser = () => {
           {GetUser().username}
         </div>
       </div>
-      <div className="dropdown-menu dropdown-menu1" aria-labelledby="navbarDropdown">
+      <div
+        className="dropdown-menu dropdown-menu1"
+        aria-labelledby="navbarDropdown"
+      >
         {isAuthenticated() ? (
-          <NavLink to="/devdash" className="dropdown-item" activeClassName="active">
+          <NavLink
+            to="/devdash"
+            className="dropdown-item"
+            activeClassName="active"
+          >
             Dev Dash
           </NavLink>
         ) : null}
-        <NavLink to={`/user/${GetUser().id}`} className="dropdown-item" activeClassName="active">
+        <NavLink
+          to={`/user/${GetUser().id}`}
+          className="dropdown-item"
+          activeClassName="active"
+        >
           Profile
         </NavLink>
-        <NavLink to="/logout" className="dropdown-item" activeClassName="active">
+        <NavLink
+          to="/logout"
+          className="dropdown-item"
+          activeClassName="active"
+        >
           Logout
         </NavLink>
       </div>
@@ -197,13 +218,22 @@ const App = () => {
         <div className="collapse navbar-collapse" id="navbarColor02">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <NavLink to="/" className="nav-link" activeClassName="active" exact>
+              <NavLink
+                to="/"
+                className="nav-link"
+                activeClassName="active"
+                exact
+              >
                 Home
               </NavLink>
             </li>
             <li className="nav-item"></li>
             <li className="nav-item">
-              <NavLink to="/contact" className="nav-link" activeClassName="active">
+              <NavLink
+                to="/contact"
+                className="nav-link"
+                activeClassName="active"
+              >
                 About & Contact
               </NavLink>
             </li>
@@ -219,14 +249,29 @@ const App = () => {
               >
                 TycoonMogul
               </a>
-              <div className="dropdown-menu dropdown-menu1" aria-labelledby="navbarDropdown">
-                <NavLink to="/tycoonmogul" className="dropdown-item" activeClassName="active">
+              <div
+                className="dropdown-menu dropdown-menu1"
+                aria-labelledby="navbarDropdown"
+              >
+                <NavLink
+                  to="/tycoonmogul"
+                  className="dropdown-item"
+                  activeClassName="active"
+                >
                   Information
                 </NavLink>
-                <NavLink to="/status" className="dropdown-item" activeClassName="active">
+                <NavLink
+                  to="/status"
+                  className="dropdown-item"
+                  activeClassName="active"
+                >
                   Status
                 </NavLink>
-                <NavLink to="/leaderboards" className="dropdown-item" activeClassName="active">
+                <NavLink
+                  to="/leaderboards"
+                  className="dropdown-item"
+                  activeClassName="active"
+                >
                   Leaderboards
                 </NavLink>
                 {/* <NavLink to="/deletion" className="dropdown-item" activeClassName="active">
@@ -242,24 +287,40 @@ const App = () => {
               </div>
             </li>
             <li className="nav-item">
-              <NavLink to="/doghouse" className="nav-link" activeClassName="active">
+              <NavLink
+                to="/doghouse"
+                className="nav-link"
+                activeClassName="active"
+              >
                 Doghouse
               </NavLink>
             </li>
             <li className="nav-item"></li>
             <li className="nav-item">
-              <NavLink to="/donors" className="nav-link" activeClassName="active">
+              <NavLink
+                to="/donors"
+                className="nav-link"
+                activeClassName="active"
+              >
                 Donors
               </NavLink>
             </li>
             <li className="nav-item">
-              <a href="https://discord.gg/Ef2AQns" className="nav-link" target="blank_">
+              <a
+                href="https://discord.gg/Ef2AQns"
+                className="nav-link"
+                target="blank_"
+              >
                 Discord Server
               </a>
             </li>
             <li className="nav-item">
-              <NavLink to="/privacy" className="nav-link" activeClassName="active">
-                Privacy Policy
+              <NavLink
+                to="/policies"
+                className="nav-link"
+                activeClassName="active"
+              >
+                Policies
               </NavLink>
             </li>
           </ul>
@@ -273,7 +334,11 @@ const App = () => {
                   <button
                     type="button"
                     class="btn btn-primary"
-                    style={{ borderRadius: "1rem", backgroundColor: "#4673a3", width: "6rem" }}
+                    style={{
+                      borderRadius: "1rem",
+                      backgroundColor: "#4673a3",
+                      width: "6rem",
+                    }}
                     onClick={handleDiscordLogin}
                   >
                     Login
@@ -307,8 +372,8 @@ const App = () => {
         <Route path="/leaderboards" exact>
           <Leaderboard />
         </Route>
-        <Route path="/privacy" exact>
-          <PrivacyPolicy />
+        <Route path="/policies" exact>
+          <Policies />
         </Route>
         <Route path="/deletion" exact>
           <DataDeletionForm />
@@ -333,9 +398,18 @@ const App = () => {
           }}
           exact
         />
-        <Route name="login_callback" path="/login/callback" component={LoginCallback} />
+        <Route
+          name="login_callback"
+          path="/login/callback"
+          component={LoginCallback}
+        />
         <Route name="allianceviewer" path="/alliances/*" component={Alliance} />
-        <Route name="usersearch" path="/user" exact={true} component={UserSearch} />
+        <Route
+          name="usersearch"
+          path="/user"
+          exact={true}
+          component={UserSearch}
+        />
         <Route name="profileviewer" path="/user/*" component={Profile} />
         {/* <Route name="forbidden" path="/403" component={Forbidden} exact></Route>
         <Route name="unauthorized" path="/401" component={Unauthorized} exact></Route> */}
