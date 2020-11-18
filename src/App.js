@@ -375,6 +375,15 @@ const App = () => {
         <Route path="/policies" exact>
           <Policies />
         </Route>
+        <Route path="/privacy" exact>
+          <Policies />
+        </Route>
+        <Route path="/terms" exact>
+          <Policies />
+        </Route>
+        <Route path="/cookies" exact>
+          <Policies />
+        </Route>
         <Route path="/deletion" exact>
           <DataDeletionForm />
         </Route>
