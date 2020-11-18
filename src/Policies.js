@@ -24,7 +24,7 @@ export default class Policies extends React.Component {
         </MetaTags>
         <div className="container text-center">
           <iframe
-            src="/policies/privacypolicy.html"
+            src="/md_policies/privacypolicy.html"
             title="Privacy Policy"
             width="100%"
             height={500}
@@ -32,7 +32,7 @@ export default class Policies extends React.Component {
           />
 
           <iframe
-            src="/policies/termsandconditions.html"
+            src="/md_policies/termsandconditions.html"
             title="Terms and Conditions"
             width="100%"
             height={500}
@@ -40,7 +40,7 @@ export default class Policies extends React.Component {
           />
 
           <iframe
-            src="/policies/cookiepolicy.html"
+            src="/md_policies/cookiepolicy.html"
             title="Cookie Policy"
             width="100%"
             height={500}
