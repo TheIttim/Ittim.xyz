@@ -20,7 +20,6 @@ import Alliance from "./Alliance";
 import Donors from "./Donors";
 import Doghouse from "./Doghouse";
 import Profile from "./Profile";
-import UserSearch from "./User";
 import config from "./config";
 
 // styling for devdash
@@ -413,15 +412,14 @@ const App = () => {
           component={LoginCallback}
         />
         <Route name="allianceviewer" path="/alliances/*" component={Alliance} />
-        <Route
-          name="usersearch"
-          path="/user"
-          exact={true}
-          component={UserSearch}
-        />
         <Route name="profileviewer" path="/user/*" component={Profile} />
-        {/* <Route name="forbidden" path="/403" component={Forbidden} exact></Route>
-        <Route name="unauthorized" path="/401" component={Unauthorized} exact></Route> */}
+        <Route name="forbidden" path="/403" component={Forbidden} exact></Route>
+        <Route
+          name="unauthorized"
+          path="/401"
+          component={Unauthorized}
+          exact
+        ></Route>
         <Route component={PageNotFound}></Route>
       </Switch>
     </Router>

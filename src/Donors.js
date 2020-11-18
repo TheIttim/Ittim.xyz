@@ -1,21 +1,36 @@
 import React from "react";
-import MetaTags from "react-meta-tags";
+import { Helmet } from "react-helmet";
 
 export default class Donors extends React.Component {
   render() {
     return (
       <div className="app">
-        <MetaTags>
+        <Helmet>
           <title>Mogul Development | Donors</title>
-          <link rel="canonical" href="https://www.moguldevs.xyz/donors" />
-          <meta property="og:title" content="Ittim | Donors" />
+          <meta name="title" content="Mogul Development | Donors" />
+          <meta
+            name="description"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
+
+          <meta property="og:type" content="website" />
           <meta property="og:url" content="https://moguldevs.xyz/donors" />
-          <meta property="og:image" content="https://moguldevs.xyz/Profile_Picture.png" />\
+          <meta property="og:title" content="Mogul Development | Donors" />
           <meta
             property="og:description"
             content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
           />
-        </MetaTags>
+          <meta property="og:image" content="/Profile_Picture.png" />
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://moguldevs.xyz/donors" />
+          <meta property="twitter:title" content="Mogul Development | Donors" />
+          <meta
+            property="twitter:description"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
+          <meta property="twitter:image" content="/Profile_Picture.png" />
+        </Helmet>
         <div class="container text-center">
           <h3 style={{ marginTop: "2%" }}>Donors</h3>
           <hr />

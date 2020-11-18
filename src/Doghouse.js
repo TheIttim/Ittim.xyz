@@ -1,21 +1,42 @@
 import React from "react";
-import MetaTags from "react-meta-tags";
+import { Helmet } from "react-helmet";
 
 export default class Doghouse extends React.Component {
   render() {
     return (
       <div>
-        <MetaTags>
+        <Helmet>
           <title>Mogul Development | Doghouse</title>
-          <link rel="canonical" href="https://www.moguldevs.xyz/doghouse" />
-          <meta property="og:title" content="Ittim | Doghouse" />
+          <meta name="title" content="Mogul Development | Doghouse" />
+          <meta
+            name="description"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
+
+          <meta property="og:type" content="website" />
           <meta property="og:url" content="https://moguldevs.xyz/doghouse" />
-          <meta property="og:image" content="https://moguldevs.xyz/TM_icon.png" />
+          <meta property="og:title" content="Mogul Development | Doghouse" />
           <meta
             property="og:description"
             content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
           />
-        </MetaTags>
+          <meta property="og:image" content="/Profile_Picture.png" />
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta
+            property="twitter:url"
+            content="https://moguldevs.xyz/doghouse"
+          />
+          <meta
+            property="twitter:title"
+            content="Mogul Development | Doghouse"
+          />
+          <meta
+            property="twitter:description"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
+          <meta property="twitter:image" content="/Profile_Picture.png" />
+        </Helmet>
         <div className="container text-center">
           <h3 className="title" style={{ marginTop: "2%" }}>
             Doghouse
@@ -23,14 +44,18 @@ export default class Doghouse extends React.Component {
           <br />
           <p>
             Know a lot about dog breeds or want to learn more? <br />
-            Use this bot to generate a picture of a dog and then respond with the breed that is in
-            the picture. If you are correct, you'll earn some money! If not, try again! Doghouse is
-            a{" "}
-            <a href="https://bit.ly/2Oi0QaZ" target="_blank" rel="noopener noreferrer">
+            Use this bot to generate a picture of a dog and then respond with
+            the breed that is in the picture. If you are correct, you'll earn
+            some money! If not, try again! Doghouse is a{" "}
+            <a
+              href="https://bit.ly/2Oi0QaZ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Discord Verified
             </a>{" "}
-            bot, so you can trust it with the minimal amount of data it collects; and Of course, you
-            can vote on{" "}
+            bot, so you can trust it with the minimal amount of data it
+            collects; and Of course, you can vote on{" "}
             <a
               href="https://top.gg/bot/684871736797429777/vote"
               target="_blank"
@@ -60,22 +85,26 @@ export default class Doghouse extends React.Component {
                 <td>a</td>
                 <td>Pet</td>
                 <td>
-                  Adopt a dog from the shelter! They have three to choose from, so come back later
-                  if they aren't the breed you want.
+                  Adopt a dog from the shelter! They have three to choose from,
+                  so come back later if they aren't the breed you want.
                 </td>
               </tr>
               <tr>
                 <th scope="col">Balance</th>
                 <td>b, bal</td>
                 <td>Statistics</td>
-                <td>Each time you answer correctly, you earn some money. How much do you have?</td>
+                <td>
+                  Each time you answer correctly, you earn some money. How much
+                  do you have?
+                </td>
               </tr>
               <tr>
                 <th scope="col">Bet</th>
                 <td>None</td>
                 <td>Events</td>
                 <td>
-                  Bet on the outcome of a dog race for a chance to get your money back plus more!
+                  Bet on the outcome of a dog race for a chance to get your
+                  money back plus more!
                 </td>
               </tr>
               <tr>
@@ -88,7 +117,10 @@ export default class Doghouse extends React.Component {
                 <th scope="col">Delete</th>
                 <td>None</td>
                 <td>Information</td>
-                <td>Allows you to delete all of your information from the bot and cause you to start over.</td>
+                <td>
+                  Allows you to delete all of your information from the bot and
+                  cause you to start over.
+                </td>
               </tr>
               <tr>
                 <th scope="col">Documentation</th>
@@ -118,13 +150,18 @@ export default class Doghouse extends React.Component {
                 <th scope="col">Guess</th>
                 <td>g</td>
                 <td>Game</td>
-                <td>The bot will send an image of a dog, then you need to respond in the same channel with the breed of dog that is displayed.</td>
+                <td>
+                  The bot will send an image of a dog, then you need to respond
+                  in the same channel with the breed of dog that is displayed.
+                </td>
               </tr>
               <tr>
                 <th scope="col">Inventory</th>
                 <td>inv, i</td>
                 <td>Statistics</td>
-                <td>See what items you have already purchased from the shop.</td>
+                <td>
+                  See what items you have already purchased from the shop.
+                </td>
               </tr>
               <tr>
                 <th scope="col">Nickname</th>
@@ -142,13 +179,19 @@ export default class Doghouse extends React.Component {
                 <th scope="col">Prefix</th>
                 <td>setprefix</td>
                 <td>Information</td>
-                <td>Allows server admins to change the prefix of the server.</td>
+                <td>
+                  Allows server admins to change the prefix of the server.
+                </td>
               </tr>
               <tr>
                 <th scope="col">Profile</th>
                 <td>p</td>
                 <td>Statistics</td>
-                <td>Check your statistics! How many have you gotten correct or incorrect? Also displays the percentage of times you've been right.</td>
+                <td>
+                  Check your statistics! How many have you gotten correct or
+                  incorrect? Also displays the percentage of times you've been
+                  right.
+                </td>
               </tr>
               <tr>
                 <th scope="col">Shop</th>
@@ -178,7 +221,10 @@ export default class Doghouse extends React.Component {
                 <th scope="col">Vet</th>
                 <td>None</td>
                 <td>Events</td>
-                <td>Take your dog to the vet to regain their hunger, thirst, and energy if they will not listen to your commands.</td>
+                <td>
+                  Take your dog to the vet to regain their hunger, thirst, and
+                  energy if they will not listen to your commands.
+                </td>
               </tr>
             </tbody>
           </table>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MetaTags from "react-meta-tags";
+import { Helmet } from "react-helmet";
 import config from "./config";
 
 const Profile = (props) => {
@@ -76,10 +76,12 @@ const Profile = (props) => {
                 <ul>
                   <h3>User Information</h3>
                   <li className="uli">
-                    <strong>Tycoon Name:</strong> {data.tycoon ? data.tycoon.name : "None"}
+                    <strong>Tycoon Name:</strong>{" "}
+                    {data.tycoon ? data.tycoon.name : "None"}
                   </li>
                   <li className="uli">
-                    <strong>Alliance Name:</strong> {data.alliance ? data.alliance.name : "None"}
+                    <strong>Alliance Name:</strong>{" "}
+                    {data.alliance ? data.alliance.name : "None"}
                   </li>
                 </ul>
               </div>
@@ -129,17 +131,41 @@ const Profile = (props) => {
 
   return (
     <div className="app">
-      <MetaTags>
+      <Helmet>
         <title>Mogul Development | Profile Viewer</title>
-        <link rel="canonical" href={`https://www.moguldevs.xyz/user/${id}`} />
-        <meta property="og:title" content="Mogul Development | Profile Viewer" />
+        <meta name="title" content="Mogul Development | Profile Viewer" />
+        <meta
+          name="description"
+          content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+        />
+
+        <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://moguldevs.xyz/user/${id}`} />
-        <meta property="og:image" content="https://moguldevs.xyz/TM_icon.png" />
+        <meta
+          property="og:title"
+          content="Mogul Development | Profile Viewier"
+        />
         <meta
           property="og:description"
           content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
         />
-      </MetaTags>
+        <meta property="og:image" content="/Profile_Picture.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content={`https://moguldevs.xyz/user/${id}`}
+        />
+        <meta
+          property="twitter:title"
+          content="Mogul Development | Profile Viewer"
+        />
+        <meta
+          property="twitter:description"
+          content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+        />
+        <meta property="twitter:image" content="/Profile_Picture.png" />
+      </Helmet>
       {content}
     </div>
   );

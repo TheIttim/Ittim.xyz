@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MetaTags from "react-meta-tags";
+import { Helmet } from "react-helmet";
 import config from "./config";
 
 const Alliance = (props) => {
@@ -32,11 +32,22 @@ const Alliance = (props) => {
     hours = hours ? hours : 12; // the hour '0' should be '12'
     minutes = minutes < 10 ? "0" + minutes : minutes;
     var strTime = hours + ":" + minutes + " " + ampm;
-    return date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear() + "  " + strTime;
+    return (
+      date.getMonth() +
+      1 +
+      "/" +
+      date.getDate() +
+      "/" +
+      date.getFullYear() +
+      "  " +
+      strTime
+    );
   }
 
   const id = props.match.params[0] || null;
-  const data = usePromise(`${config.API_URL}${config.ENDPOINTS.ALLIANCE}/${id}`);
+  const data = usePromise(
+    `${config.API_URL}${config.ENDPOINTS.ALLIANCE}/${id}`
+  );
   let content = (
     <div className="container text-center">
       <h1 className="title" style={{ marginTop: "2%" }}>
@@ -170,17 +181,44 @@ const Alliance = (props) => {
 
   return (
     <div className="app">
-      <MetaTags>
+      <Helmet>
         <title>Mogul Development | Alliance Viewer</title>
-        <link rel="canonical" href={`https://www.moguldevs.xyz/alliances/${id}`} />
-        <meta property="og:title" content="Ittim | Alliance Viewer" />
-        <meta property="og:url" content={`https://moguldevs.xyz/alliances/${id}`} />
-        <meta property="og:image" content="https://moguldevs.xyz/TM_icon.png" />
+        <meta name="title" content="Mogul Development | Alliance Viewer" />
+        <meta
+          name="description"
+          content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content={`https://moguldevs.xyz/alliances/${id}`}
+        />
+        <meta
+          property="og:title"
+          content="Mogul Development | Alliance Viewer"
+        />
         <meta
           property="og:description"
           content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
         />
-      </MetaTags>
+        <meta property="og:image" content="/TM_icon.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content={`https://moguldevs.xyz/alliances/${id}`}
+        />
+        <meta
+          property="twitter:title"
+          content="Mogul Development | Alliance Viewer"
+        />
+        <meta
+          property="twitter:description"
+          content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+        />
+        <meta property="twitter:image" content="/TM_icon.png" />
+      </Helmet>
       {content}
     </div>
   );

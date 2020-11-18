@@ -1,5 +1,5 @@
 import React from "react";
-import MetaTags from "react-meta-tags";
+import { Helmet } from "react-helmet";
 import AllianceMemberLB from "./Leaderboards/AllianceMembers.js";
 import BalanceLB from "./Leaderboards/Balance";
 import TycoonLevelLB from "./Leaderboards/TycoonLevel.js";
@@ -26,7 +26,8 @@ export default class Leaderboard extends React.Component {
   componentDidMount() {
     this.messages.show({
       severity: "warn",
-      summary: "Some avatars may be broken, this is a known issue related to changing avatars.",
+      summary:
+        "Some avatars may be broken, this is a known issue related to changing avatars.",
       closable: false,
       sticky: true,
       life: null,
@@ -47,17 +48,44 @@ export default class Leaderboard extends React.Component {
 
     return (
       <div className="app">
-        <MetaTags>
+        <Helmet>
           <title>Mogul Development | Leaderboards</title>
-          <link rel="canonical" href="https://www.moguldevs.xyz/leaderboard/balance" />
-          <meta property="og:title" content="Ittim | Leaderboard" />
-          <meta property="og:url" content="https://moguldevs.xyz/leaderboard/balance" />
-          <meta property="og:image" content="https://moguldevs.xyz/TM_icon.png" />
+          <meta name="title" content="Mogul Development | Leaderboards" />
+          <meta
+            name="description"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
+
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:url"
+            content="https://moguldevs.xyz/leaderboards"
+          />
+          <meta
+            property="og:title"
+            content="Mogul Development | Leaderboards"
+          />
           <meta
             property="og:description"
             content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
           />
-        </MetaTags>
+          <meta property="og:image" content="/Profile_Picture.png" />
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta
+            property="twitter:url"
+            content="https://moguldevs.xyz/leaderboards"
+          />
+          <meta
+            property="twitter:title"
+            content="Mogul Development | Leaderboards"
+          />
+          <meta
+            property="twitter:description"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
+          <meta property="twitter:image" content="/Profile_Picture.png" />
+        </Helmet>
         <div className="container text-center">
           <div className="row">
             <div className="col-3"></div>
@@ -74,10 +102,15 @@ export default class Leaderboard extends React.Component {
                   <Ripple />
                 </button>
               </div>
-              <div className="leaderboard-section col" style={{ color: "#ffffff" }}>
+              <div
+                className="leaderboard-section col"
+                style={{ color: "#ffffff" }}
+              >
                 <button
                   className={`leaderboard-link btn p-ripple ${
-                    this.state.type === "userlevel" ? "leaderboardnav-active" : ""
+                    this.state.type === "userlevel"
+                      ? "leaderboardnav-active"
+                      : ""
                   }`}
                   data-type="userlevel"
                   onClick={this.onClick}
@@ -89,7 +122,9 @@ export default class Leaderboard extends React.Component {
               <div className="leaderboard-section col">
                 <button
                   className={`leaderboard-link btn p-ripple ${
-                    this.state.type === "tycoonlevel" ? "leaderboardnav-active" : ""
+                    this.state.type === "tycoonlevel"
+                      ? "leaderboardnav-active"
+                      : ""
                   }`}
                   data-type="tycoonlevel"
                   onClick={this.onClick}
@@ -101,7 +136,9 @@ export default class Leaderboard extends React.Component {
               <div className="leaderboard-section col">
                 <button
                   className={`leaderboard-link btn btn-last p-ripple ${
-                    this.state.type === "alliancemembers" ? "leaderboardnav-active" : ""
+                    this.state.type === "alliancemembers"
+                      ? "leaderboardnav-active"
+                      : ""
                   }`}
                   data-type="alliancemembers"
                   onClick={this.onClick}

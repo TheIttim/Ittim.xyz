@@ -4,7 +4,7 @@ import TimerMixin from "react-timer-mixin";
 import fetch from "node-fetch";
 import ClusterItem from "./ClusterItem";
 import config from "../config";
-import MetaTags from "react-meta-tags";
+import { Helmet } from "react-helmet";
 
 export default class Status extends React.Component {
   constructor(props) {
@@ -41,7 +41,9 @@ export default class Status extends React.Component {
 
     for (var i = 0; i < data.clusters.length; i++) {
       const cluster = data.clusters[i];
-      const clusterShards = data.shards.filter((x) => cluster.shards.indexOf(x) < 0);
+      const clusterShards = data.shards.filter(
+        (x) => cluster.shards.indexOf(x) < 0
+      );
       clusterItems.push(
         <ClusterItem
           key={cluster.id}
@@ -89,7 +91,9 @@ export default class Status extends React.Component {
     if (this.state && this.state.clusters) {
       content = (
         <div className="container status-container" style={{ marginTop: "2%" }}>
-          <h6 className="text-center">This data updates automatically every few seconds</h6>
+          <h6 className="text-center">
+            This data updates automatically every few seconds
+          </h6>
           <div className="row">
             <div className="col-12">
               <h3 className="header">Statistics Summary</h3>
@@ -107,13 +111,15 @@ export default class Status extends React.Component {
 
             <div className="col-12">
               <h6 className="subtitle">
-                Memory Heap: {(this.state.memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB
+                Memory Heap:{" "}
+                {(this.state.memoryUsage.heapUsed / 1024 / 1024).toFixed(2)} MB
               </h6>
             </div>
 
             <div className="col-12">
               <h6 className="subtitle">
-                Memory RSS: {(this.state.memoryUsage.rss / 1024 / 1024).toFixed(2)} MB
+                Memory RSS:{" "}
+                {(this.state.memoryUsage.rss / 1024 / 1024).toFixed(2)} MB
               </h6>
             </div>
 
@@ -122,7 +128,9 @@ export default class Status extends React.Component {
             </div>
 
             <div className="col-12">
-              <h6 className="subtitle">Clusters: {this.state.clusters.length}</h6>
+              <h6 className="subtitle">
+                Clusters: {this.state.clusters.length}
+              </h6>
             </div>
           </div>
 
@@ -134,7 +142,9 @@ export default class Status extends React.Component {
               <h6 className="subtitle-key">
                 Key: <span className="key-item ready">Online</span>,{" "}
                 <span className="key-item connecting">Connecting</span>,{" "}
-                <span className="key-item disconnected">Disconnected/Errored</span>
+                <span className="key-item disconnected">
+                  Disconnected/Errored
+                </span>
               </h6>
             </div>
             <div className="status-grid">{this.state.shardItems}</div>
@@ -153,24 +163,40 @@ export default class Status extends React.Component {
         <div className="no-content">
           <span>(╯°□°)╯︵ ┻━┻</span>
           <br />
-          Oops, it seems the bot may be offline or rebooting! <br /> This page will update when data
-          becomes available.
+          Oops, it seems the bot may be offline or rebooting! <br /> This page
+          will update when data becomes available.
         </div>
       );
     }
 
     return (
       <div className="app">
-        <MetaTags>
+        <Helmet>
           <title>Mogul Development | Status</title>
-          <link rel="canonical" href="https://www.moguldevs.xyz/status" />
-          <meta property="og:title" content="Ittim | Status" />
+          <meta name="title" content="Mogul Development | Status" />
+          <meta
+            name="description"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
+
+          <meta property="og:type" content="website" />
           <meta property="og:url" content="https://moguldevs.xyz/status" />
+          <meta property="og:title" content="Mogul Development | Status" />
           <meta
             property="og:description"
-            content="Welcome to moguldevs.xyz, the website for all of Mogul Development's projects, like TycoonMogul, Doghouse, & Minebot!"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
           />
-        </MetaTags>
+          <meta property="og:image" content="/TM_icon.png" />
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://moguldevs.xyz/status" />
+          <meta property="twitter:title" content="Mogul Development | Status" />
+          <meta
+            property="twitter:description"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
+          <meta property="twitter:image" content="/TM_icon.png" />
+        </Helmet>
         {content}
       </div>
     );

@@ -1,21 +1,45 @@
 import React from "react";
-import MetaTags from "react-meta-tags";
+import { Helmet } from "react-helmet";
 
 export default class TycoonMogul extends React.Component {
   render() {
     return (
       <div>
-        <MetaTags>
-          <title>Ittim | TycoonMogul</title>
-          <link rel="canonical" href="https://www.moguldevs.xyz/tycoonmogul" />
-          <meta property="og:title" content="Ittim | TycoonMogul" />
+        <Helmet>
+          <title>Mogul Development | Tycoon Mogul</title>
+          <meta name="title" content="Mogul Development | Tycoon Mogul" />
+          <meta
+            name="description"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
+
+          <meta property="og:type" content="website" />
           <meta property="og:url" content="https://moguldevs.xyz/tycoonmogul" />
-          <meta property="og:image" content="https://moguldevs.xyz/TM_icon.png" />
+          <meta
+            property="og:title"
+            content="Mogul Development | Tycoon Mogul"
+          />
           <meta
             property="og:description"
             content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
           />
-        </MetaTags>
+          <meta property="og:image" content="/TM_icon.png" />
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta
+            property="twitter:url"
+            content="https://moguldevs.xyz/tycoonmogul"
+          />
+          <meta
+            property="twitter:title"
+            content="Mogul Development | Tycoon Mogul"
+          />
+          <meta
+            property="twitter:description"
+            content="Welcome to moguldevs.xyz, the website for all of Ittim's projects like TycoonMogul, and his digitalized list of educations, awards, & certifications!"
+          />
+          <meta property="twitter:image" content="/TM_icon.png" />
+        </Helmet>
         <div className="container text-center">
           <h3 className="title" style={{ marginTop: "2%" }}>
             TycoonMogul
@@ -52,8 +76,8 @@ export default class TycoonMogul extends React.Component {
           </div>
           <br />
           <p>
-            TycoonMogul is a Discord bot created with the help of friends. The premise is like a
-            Tycoon game, such as{" "}
+            TycoonMogul is a Discord bot created with the help of friends. The
+            premise is like a Tycoon game, such as{" "}
             <a
               href="https://store.steampowered.com/app/346900/AdVenture_Capitalist/"
               target="_blank"
@@ -61,16 +85,20 @@ export default class TycoonMogul extends React.Component {
             >
               AdVenture Capitalist
             </a>
-            : Create a Tycoon, earn money, and upgrade the Tycoon with that money. You can even
-            create alliances with other Tycoon owners. Oh, and there's achievements! Still not
-            convinced? TycoonMogul is a{" "}
-            <a href="https://bit.ly/2Oi0QaZ" target="_blank" rel="noopener noreferrer">
+            : Create a Tycoon, earn money, and upgrade the Tycoon with that
+            money. You can even create alliances with other Tycoon owners. Oh,
+            and there's achievements! Still not convinced? TycoonMogul is a{" "}
+            <a
+              href="https://bit.ly/2Oi0QaZ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Discord Verified
             </a>{" "}
-            bot, so you can trust it with the minimal amount of data it collects! We are also
-            working on certifying TycoonMogul on every Discord Bot List we can find, which will
-            allow us to show him off even more! We are improving and certifying TycoonMogul every
-            day!
+            bot, so you can trust it with the minimal amount of data it
+            collects! We are also working on certifying TycoonMogul on every
+            Discord Bot List we can find, which will allow us to show him off
+            even more! We are improving and certifying TycoonMogul every day!
           </p>
           <hr />
           <h4>Tutorial</h4>
@@ -109,8 +137,8 @@ export default class TycoonMogul extends React.Component {
                 <td>None</td>
                 <td>Alliances</td>
                 <td>
-                  Displays information about user’s alliance, if they have one, otherwise notifies
-                  user to join alliance first
+                  Displays information about user’s alliance, if they have one,
+                  otherwise notifies user to join alliance first
                 </td>
               </tr>
               <tr>
@@ -130,7 +158,8 @@ export default class TycoonMogul extends React.Component {
                 <td>ADemote</td>
                 <td>Alliances</td>
                 <td>
-                  Allows Alliance Leader OR Officers to Demote Members (Leader {">"} Officer
+                  Allows Alliance Leader OR Officers to Demote Members (Leader{" "}
+                  {">"} Officer
                   {">"} Deputy {">"} Member)
                 </td>
               </tr>
@@ -145,8 +174,8 @@ export default class TycoonMogul extends React.Component {
                 <td>ADonate</td>
                 <td>Alliances</td>
                 <td>
-                  Allows Alliance Members to donate to their alliance's funds, allowing the alliance
-                  to be leveled up
+                  Allows Alliance Members to donate to their alliance's funds,
+                  allowing the alliance to be leveled up
                 </td>
               </tr>
               <tr>
@@ -154,15 +183,18 @@ export default class TycoonMogul extends React.Component {
                 <td>AInvite & ARecruit</td>
                 <td>Alliances</td>
                 <td>
-                  Allows Alliance Leaders, Officers, or Deputies to invite potential new members to
-                  the alliance
+                  Allows Alliance Leaders, Officers, or Deputies to invite
+                  potential new members to the alliance
                 </td>
               </tr>
               <tr>
                 <th scope="col">AllianceKick</th>
                 <td>AKick</td>
                 <td>Alliances</td>
-                <td>Allows Alliance Leaders or Officers to kick members from their alliance</td>
+                <td>
+                  Allows Alliance Leaders or Officers to kick members from their
+                  alliance
+                </td>
               </tr>
               <tr>
                 <th scope="col">AllianceLeave</th>
@@ -175,8 +207,9 @@ export default class TycoonMogul extends React.Component {
                 <td>ALU</td>
                 <td>Alliances</td>
                 <td>
-                  Allows Alliance Leader OR Officers to level up the alliance, increasing the member
-                  cap by 5, and the tycoon income generation of each member by X%
+                  Allows Alliance Leader OR Officers to level up the alliance,
+                  increasing the member cap by 5, and the tycoon income
+                  generation of each member by X%
                 </td>
               </tr>
               <tr>
@@ -190,7 +223,8 @@ export default class TycoonMogul extends React.Component {
                 <td>APromote</td>
                 <td>Alliances</td>
                 <td>
-                  Allows Alliance Leader OR Officer to Promote Members (Member {">"} Deputy
+                  Allows Alliance Leader OR Officer to Promote Members (Member{" "}
+                  {">"} Deputy
                   {">"} Officer {">"} Leader)
                 </td>
               </tr>
@@ -204,40 +238,53 @@ export default class TycoonMogul extends React.Component {
                 <th scope="col">Collect</th>
                 <td>None</td>
                 <td>Economy</td>
-                <td>Allows Users to collect income from their Tycoons (30-minute cooldown)</td>
+                <td>
+                  Allows Users to collect income from their Tycoons (30-minute
+                  cooldown)
+                </td>
               </tr>
               <tr>
                 <th scope="col">Cooldown</th>
                 <td>CD, CDs, & Cooldowns</td>
                 <td>General</td>
-                <td>Shows all currently running cooldowns on user who ran command</td>
+                <td>
+                  Shows all currently running cooldowns on user who ran command
+                </td>
               </tr>
               <tr>
                 <th scope="col">Daily</th>
                 <td>None</td>
                 <td>Economy</td>
-                <td>Lets user collect their daily reward base on Tycoon Level</td>
+                <td>
+                  Lets user collect their daily reward base on Tycoon Level
+                </td>
               </tr>
               <tr>
                 <th scope="col">Disable</th>
                 <td>None</td>
                 <td>General</td>
                 <td>
-                  Allows users to force TycoonMogul to stop collecting/generating data on them, also
-                  wipes all currently stored user data.
+                  Allows users to force TycoonMogul to stop
+                  collecting/generating data on them, also wipes all currently
+                  stored user data.
                 </td>
               </tr>
               <tr>
                 <th scope="col">Enable</th>
                 <td>None</td>
                 <td>General</td>
-                <td>Allows users to re-enable data collection/generation by TycoonMogul</td>
+                <td>
+                  Allows users to re-enable data collection/generation by
+                  TycoonMogul
+                </td>
               </tr>
               <tr>
                 <th scope="col">Flip</th>
                 <td>None</td>
                 <td>Economy</td>
-                <td>Allows user to bet on coin flip in order to try to earn money</td>
+                <td>
+                  Allows user to bet on coin flip in order to try to earn money
+                </td>
               </tr>
               <tr>
                 <th scope="col">Help</th>
@@ -279,7 +326,10 @@ export default class TycoonMogul extends React.Component {
                 <th scope="col">RequestDelete</th>
                 <td>rd</td>
                 <td>General</td>
-                <td>Allows users to request deletion of all of their TycoonMogul data</td>
+                <td>
+                  Allows users to request deletion of all of their TycoonMogul
+                  data
+                </td>
               </tr>
               <tr>
                 <th scope="col">SetPrefix</th>
@@ -303,7 +353,10 @@ export default class TycoonMogul extends React.Component {
                 <th scope="col">Toggle</th>
                 <td>None</td>
                 <td>General</td>
-                <td>Allows server administrators to toggle level up messages in their server</td>
+                <td>
+                  Allows server administrators to toggle level up messages in
+                  their server
+                </td>
               </tr>
               <tr>
                 <th scope="col">Tycoon</th>
@@ -455,7 +508,9 @@ export default class TycoonMogul extends React.Component {
             </tbody>
           </table>
           <div className="container">
-            <i>Thank You to Puyodead1#0001 for all the help with TycoonMogul v2!</i>
+            <i>
+              Thank You to Puyodead1#0001 for all the help with TycoonMogul v2!
+            </i>
           </div>
           <br />
         </div>
