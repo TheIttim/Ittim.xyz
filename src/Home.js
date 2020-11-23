@@ -67,7 +67,7 @@ export default class Home extends React.Component {
           <meta property="og:image" content="/Profile_Picture.png" />
 
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://moguldevs.xyz/home" />
+          <meta property="twitter:url" content="https://moguldevs.xyz/" />
           <meta property="twitter:title" content="Mogul Development | Home" />
           <meta
             property="twitter:description"
